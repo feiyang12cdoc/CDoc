@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <navigator url="/pages/symptomsAnalysis/index" hover-class="navigator-hover">症状分析 >> </navigator>
+      <navigator url="/pages/recommendedMedication/index" hover-class="navigator-hover">用药推荐 >> </navigator>
+      <navigator url="/pages/medicalConsultation/index" hover-class="navigator-hover">医生咨询 >> </navigator>
+      <navigator url="/pages/mapAuery/index" hover-class="navigator-hover">地图查询 >> </navigator>
+      <navigator url="/pages/outpatientInformation/index" hover-class="navigator-hover">门诊信息 >> </navigator>
+    </block>
+  </view>
+  <view class="usermotto">
+    <!-- <text class="user-motto">{{motto}}</text> -->
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+  disabled="{{disabled}}" bindtap="primary"> 信息收集 </button>
+  
+  </view>
+  
+</view>

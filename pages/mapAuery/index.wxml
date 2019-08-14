@@ -1,0 +1,3 @@
+<!--pages/mapAuery/index.wxml-->
+<text>地图查询：pages/mapAuery/index.wxml</text>
+<navigator url="/pages/outpatientInformation/index" hover-class="navigator-hover">跳转到下一页 >> </navigator> 
