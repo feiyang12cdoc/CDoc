@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/symptomsAnalysis/index",
+    "pages/recommendedMedication/index",
+    "pages/medicalConsultation/index",
+    "pages/mapAuery/index",
+    "pages/outpatientInformation/index",
+    "pages/logs/logs",
+    "pages/outpatientInformation/index.html"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

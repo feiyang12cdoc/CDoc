@@ -1,0 +1,32 @@
+<!--pages/medicalConsultation/index.wxml-->
+
+<view class="title1">在线问诊\n</view>
+
+
+
+<view class="flex-wrp">
+<text>为您推荐{{departments}}医生{{doctor_num}}位</text>
+<navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover"  style="text-align:right;">重新选择科室</navigator>
+</view>
+
+<view wx:for="{{array}}" wx:for-index="index" wx:for-item="item"> 
+
+    <view class="flex-wrp" style="flex-direction:row;" >
+      <view style="text-align:left; ">
+        <image style="width: 60px; height: 60px;" mode="aspectFill" src="./img/e32a706f6f6c6f6f6c6f6fdc01.jpg"></image>
+      </view>
+
+      <view style="text-align:right;">
+        <text>主治医生{{item.doctor_name}}  医院{{item.doctor_hospital}}\n</text>     
+        <text>擅长{{item.doctor_feature}} \n</text>
+        <text>{{item.doctor_tag}}tag\n\n</text> 
+      </view>
+
+    </view>
+  
+</view>
+
+
+
+
+

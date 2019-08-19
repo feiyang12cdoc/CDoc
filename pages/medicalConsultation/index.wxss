@@ -1,0 +1,12 @@
+/* pages/medicalConsultation/index.wxss */
+
+
+
+.title1 { 
+  color:rgb(121, 5, 5);
+  font-size: 23px;
+  text-align: center;
+  font-family: SourceHanSansSC-regular;
+}
+
+.flex-wrp {display: flex;}

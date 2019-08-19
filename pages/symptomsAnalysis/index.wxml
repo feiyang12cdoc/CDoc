@@ -1,0 +1,5 @@
+<!--pages/symptomsAnalysis/index.wxml-->
+<text>症状分析：pages/symptomsAnalysis/index.wxml</text>
+<navigator url="/pages/recommendedMedication/index" hover-class="navigator-hover">跳转到下一页 >> </navigator> 
+
+  
