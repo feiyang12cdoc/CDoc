@@ -1,9 +1,5 @@
 <!--pages/recommendedMedication/index.wxml-->
 
-<view class="title"> 
-  <text >推荐您的药品为：</text>
-</view>
-
 <view class='container'>
   <loading hidden="{{!loading}}">加载中</loading>
 

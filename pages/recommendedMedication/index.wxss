@@ -2,10 +2,6 @@
 page{
   background: #F8E71C;
 }
-.title{
-  text-align: center;
-  text-shadow: 1px 1px 1px #888;
-}
 .container{
   padding: 0 0;
 }
@@ -43,8 +39,7 @@ page{
   margin-top: 20rpx;
   border-bottom: 1px solid #DBDBDB;
   box-shadow: 2px 3px 1px 0px rgba(170, 170, 170, 1);
-  border: 1px solid #ffffff;
-  
+  border: 1px solid #ffffff;  
   border-radius: 20px;
   
 }
