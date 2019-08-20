@@ -8,3 +8,29 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+/* 公共列表 */
+.wrap-list {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 20rpx;
+}
+.wrap-item {
+  width: 90%;
+  margin: 20rpx 20rpx;
+  padding: 20rpx;
+  background-color: #eee;
+  border-radius: 12rpx;
+  display: flex;
+  box-shadow: 5rpx 5rpx 5rpx yellow;
+}
+.wrap-item-name {
+  font-size: 30rpx;
+}
+.wrap-item-image {
+  width:80rpx; 
+  height: 80rpx;
+  margin-top: 38rpx;
+}
+.wrap-item-desc {
+  margin: 34rpx;
+}

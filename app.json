@@ -1,13 +1,19 @@
 {
   "pages": [
-    "pages/index/index", 
+    "pages/index/index",
     "pages/symptomsAnalysis/index",
-    "pages/recommendedMedication/index", 
-    "pages/medicalConsultation/index", 
+    "pages/recommendedMedication/index",
+    "pages/medicalConsultation/index",
     "pages/mapAuery/index",
-    "pages/outpatientInformation/index", 
-    "pages/logs/logs"
+    "pages/outpatientInformation/index",
+    "pages/logs/logs",
+    "pages/personalInformation/index"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
