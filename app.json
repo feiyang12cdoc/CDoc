@@ -5,9 +5,12 @@
     "pages/recommendedMedication/index",
     "pages/medicalConsultation/index",
     "pages/mapAuery/index",
+
     "pages/outpatientInformation/index",
     "pages/logs/logs",
+    "pages/aiResult/index",
     "pages/fastDiagnose/fast"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

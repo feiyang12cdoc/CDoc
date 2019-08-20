@@ -1,4 +1,13 @@
 <!--index.wxml-->
+
+<view class="whitebg">
+  <navigator url="/pages/medicalConsultation/index" class="yellowCircle"></navigator>
+</view>
+
+<view class="yellowbg">
+  <navigator url="/pages/symptomsAnalysis/index" class="whiteCircle"></navigator>
+</view>
+
 <view class="pannel-start">
   <view class="content" >
     <view style="height:300rpx">
@@ -9,3 +18,4 @@
     </view>
   </view>
 </view>
+
