@@ -10,13 +10,13 @@
       <navigator url="/pages/medicalConsultation/index" hover-class="navigator-hover">医生咨询 >> </navigator>
       <navigator url="/pages/mapAuery/index" hover-class="navigator-hover">地图查询 >> </navigator>
       <navigator url="/pages/outpatientInformation/index" hover-class="navigator-hover">门诊信息 >> </navigator>
+      <navigator url="/pages/aiResult/index" hover-class="navigator-hover">AI诊断结果 >> </navigator>
     </block>
   </view>
   <view class="usermotto">
     <!-- <text class="user-motto">{{motto}}</text> -->
-    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
-  disabled="{{disabled}}" bindtap="primary"> 信息收集 </button>
-  
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary"> 信息收集 </button>
+
   </view>
-  
+
 </view>
