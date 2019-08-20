@@ -32,7 +32,7 @@ Page({
     console.log(data[0])
     for(var i =0; i<data.length;i++){
       if (data[i]['description'].length > 30 ){
-        data[i]['description'] = data[i]['description'].substr(0,25)+"..."
+        data[i]['description'] = data[i]['description'].substr(0,25)+"...";
       }
     }
     this.setData({
