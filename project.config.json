@@ -56,6 +56,22 @@
 					"pathName": "pages/medicalConsultation/index",
 					"query": "",
 					"scene": null
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/symptomsAnalysis/index",
+					"pathName": "pages/symptomsAnalysis/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aiResult/index",
+					"pathName": "pages/aiResult/index",
+					"query": "",
+					"scene": null
+				}
 				}
 			]
 		}

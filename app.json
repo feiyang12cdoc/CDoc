@@ -1,18 +1,23 @@
 {
   "pages": [
-    "pages/index/index", 
+    "pages/index/index",
     "pages/symptomsAnalysis/index",
-    "pages/recommendedMedication/index", 
-    "pages/medicalConsultation/index", 
+    "pages/recommendedMedication/index",
+    "pages/medicalConsultation/index",
     "pages/mapAuery/index",
-    "pages/outpatientInformation/index", 
-    "pages/logs/logs"
+
+    "pages/outpatientInformation/index",
+    "pages/logs/logs",
+    "pages/aiResult/index",
+    "pages/fastDiagnose/fast"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#F8E71C",
+    "navigationBarTitleText": "CDoc",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F8E71C"
   },
   "sitemapLocation": "sitemap.json"
 }

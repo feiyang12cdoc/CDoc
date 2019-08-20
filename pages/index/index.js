@@ -16,6 +16,19 @@ Page({
     })
   },
   onLoad: function () {
+    wx.request({
+      url: 'https://wuwei.soft.360.cn/feiYang/queryHospital',
+      data: {
+        hospitalNameList: '北京大学第一医院, 北京协和医院'
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log('res', res)
+        console.log('res.data.data', res.data.data);
+      }
+    });
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -42,6 +55,16 @@ Page({
         }
       })
     }
+    wx.setNavigationBarTitle({
+      title: ""
+    })
+    // 自动跳转
+    setTimeout(()=>{
+      wx.redirectTo({
+        url: '/pages/aiResult/index'
+      })
+    },1500)
+
   },
   getUserInfo: function(e) {
     console.log(e)
