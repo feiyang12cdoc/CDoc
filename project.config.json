@@ -48,6 +48,14 @@
 			"list": []
 		},
 		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/medicalConsultation/index",
+					"pathName": "pages/medicalConsultation/index",
+					"query": "",
+					"scene": null
 			"current": 2,
 			"list": [
 				{
@@ -63,12 +71,7 @@
 					"pathName": "pages/aiResult/index",
 					"query": "",
 					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/aiResult/index",
-					"pathName": "pages/aiResult/index",
-					"scene": null
+				}
 				}
 			]
 		}
