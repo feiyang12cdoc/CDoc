@@ -1,5 +1,13 @@
 <!--pages/symptomsAnalysis/index.wxml-->
-<text>症状分析：pages/symptomsAnalysis/index.wxml</text>
-<navigator url="/pages/recommendedMedication/index" hover-class="navigator-hover">跳转到下一页 >> </navigator> 
+<view class="page-body">
+  <progress percent="{{questionPercent}}" color="black" backgroundColor="#FDEB17" active />
 
-  
+  <view class='card_bg'>
+    <view class='title'>{{question}}</view>
+    <view wx:for="{{selectorNum}}" >
+    <view bindtap='click' class='card_yellow'>{{selector}}</view>
+    </view>
+  </view>
+
+  <navigator url="/pages/recommendedMedication/index" hover-class="navigator-hover">跳转到下一页 >> </navigator>
+</view>

@@ -1,1 +1,38 @@
 /* pages/symptomsAnalysis/index.wxss */
+
+page {
+  background: #fdeb17;
+}
+
+.card_bg {
+  width: 95%;
+  background-color: #fff;
+  margin: 20rpx auto 0;
+  height: 518px;
+  border-radius: 20rpx;
+}
+
+.title {
+  text-align: left;
+  font-family: SourceHanSansSC-regular;
+  margin-top: 20rpx;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-size: 23px;
+  padding-top: 60rpx;
+  padding-left: 70rpx;
+}
+
+.card_yellow {
+  width: 322px;
+  height: 50px;
+  border-radius: 7px;
+  background-color: rgba(253, 235, 23);
+  color: rgba(16, 16, 16, 1);
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: bold;
+  margin: 20rpx auto;
+}
