@@ -6,12 +6,17 @@
     "pages/medicalConsultation/index",
     "pages/mapAuery/index",
 
+    "pages/personalInformation/index"
     "pages/outpatientInformation/index",
     "pages/logs/logs",
     "pages/aiResult/index",
     "pages/fastDiagnose/fast"
-
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F8E71C",
