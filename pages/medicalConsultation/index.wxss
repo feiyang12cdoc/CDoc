@@ -1,12 +1,64 @@
 /* pages/medicalConsultation/index.wxss */
 
-
-
-.title1 { 
-  color:rgb(121, 5, 5);
-  font-size: 23px;
-  text-align: center;
-  font-family: SourceHanSansSC-regular;
+page{
+  background: #F8E71C;
 }
+
+
+.title{
+  text-align: center;
+  text-shadow: 1px 1px 1px #888;
+}
+
+.item{
+  display:flex;
+  height: 200rpx;  
+  width: 700rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #DBDBDB;
+  box-shadow: 2px 3px 1px 0px rgba(170, 170, 170, 1);
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+} 
+
+.item_content{
+  width: 200px;
+  height: 100rpx;
+  font-size: 11pt;
+  color: #888;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.item_departments{
+  width: 200px;
+  
+  color: rgba(94, 94, 94, 1);
+  font-size: 12px;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.item_features{
+  width: 200px;
+  color: rgba(175, 175, 175, 1);
+  font-size: 12px;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.item_result{
+  width: 200px;
+  color: rgba(225, 152, 0, 1);
+  font-size: 12px;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 
 .flex-wrp {display: flex;}

@@ -4,24 +4,35 @@ Page({
   /**
    * 页面的初始数据
    */
+  
+  
   data: {
-    array: [{doctor_name:1, doctor_hospital:1.2, 
-      doctor_feature: [1.3, 1.4, 1.5], doctor_tag: [1.6, 1.7]
-    }, {
-      doctor_name: 2, doctor_hospital: 2.2,
-        doctor_feature: [2.3, 2.4, 2.5], doctor_tag: [2.6, 2.7]
-      }, {
-        doctor_name: 3, doctor_hospital: 3.2,
-        doctor_feature: [3.3, 3.4, 3.5], doctor_tag: [3.6, 3.7]
-      }],
-    departments: "口腔科",
-    doctor_num: 3,
-    
-    
+    loading: false,
+    list: [
+      {
+        "id": 1, 
+        "photo": "./img/e32a706f6f6c6f6f6c6f6fdc01.jpg",
+        "name": "医生1",
+        "departments": "口腔科",
+        "hospital":"广东省深圳医院",
+        "features": "骨性牙列不齐，各种正畸技术",
+        "tag":["从业12年","快速回复"],
+        "score":4.8,
+        "answer":450,
+      },
+      {
+        "id": 2,
+        "photo": "./img/e32a706f6f6c6f6f6c6f6fdc01.jpg",
+        "name": "医生2",
+        "departments": "口腔科",
+        "hospital": "广东省北京大学深圳医院",
+        "features": "骨性：各种正畸技术",
+        "tag": ["从业5年", "快速回复"],
+        "score": 4.8,
+        "answer": 450,
+      },
+    ]
   },
-  
-
-  
   /**
    * 生命周期函数--监听页面加载
    */
