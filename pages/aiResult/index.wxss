@@ -1,4 +1,5 @@
 /* pages/aiResult/index.wxss */
+
 page {
   background: #fdeb17;
 }
@@ -21,17 +22,22 @@ page {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
 }
-.col{
+
+.col {
   display: flex;
   flex-direction: column;
 }
 
-.image{
+.imageDocker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
   width: 100rpx;
   height: 100rpx;
-  margin: 10rpx auto;
 }
 
 .title {
@@ -59,14 +65,14 @@ page {
   font-weight: bold;
 }
 
-.recommendedMedication{
+.recommendedMedication {
   text-size-adjust: 12rpx;
 }
 
-.medicalConsultation{
+.medicalConsultation {
   text-size-adjust: 12rpx;
 }
 
-.mapAuery{
+.mapAuery {
   text-size-adjust: 12rpx;
 }

@@ -8,20 +8,20 @@
   </view>
   <view class='card_fun_bg'>
     <navigator class="col" url="/pages/recommendedMedication/index" class="recommendedMedication">
-      <view>
-        <image src="./pills.png" class="image"></image>
+      <view class="imageDocker">
+        <image src="./image/pills.png" class="image"></image>
       </view>
       <text>药品推荐</text>
     </navigator>
     <navigator class="col" url="/pages/medicalConsultation/index" class="medicalConsultation">
-      <view>
-        <image src="./doctor.png" class="image"></image>
+      <view class="imageDocker">
+        <image src="./image/doctor.png" class="image"></image>
       </view>      
       <text>在线问诊</text>
     </navigator>
     <navigator class="col" url="/pages/mapAuery/index" class="mapAuery">
-      <view>
-        <image src="./hospital.png" class="image"></image>
+      <view class="imageDocker">
+        <image src="./image/hospital.png" class="image"></image>
       </view>
       <text>极速挂号</text>
     </navigator>
