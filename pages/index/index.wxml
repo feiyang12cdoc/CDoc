@@ -1,4 +1,5 @@
 <!--index.wxml-->
+
 <view class="whitebg">
   <navigator url="/pages/medicalConsultation/index" class="yellowCircle"></navigator>
 </view>
@@ -6,11 +7,15 @@
 <view class="yellowbg">
   <navigator url="/pages/symptomsAnalysis/index" class="whiteCircle"></navigator>
 </view>
-<!-- <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary"> 信息收集 </button>
 
-  <navigator url="/pages/symptomsAnalysis/index" hover-class="navigator-hover">症状分析 >> </navigator>
-  <navigator url="/pages/recommendedMedication/index" hover-class="navigator-hover">用药推荐 >> </navigator>
-  <navigator url="/pages/medicalConsultation/index" hover-class="navigator-hover">医生咨询 >> </navigator>
-  <navigator url="/pages/mapAuery/index" hover-class="navigator-hover">地图查询 >> </navigator>
-  <navigator url="/pages/outpatientInformation/index" hover-class="navigator-hover">门诊信息 >> </navigator>
-  <navigator url="/pages/aiResult/index" hover-class="navigator-hover">AI诊断结果 >> </navigator> -->
+<view class="pannel-start">
+  <view class="content" >
+    <view style="height:300rpx">
+      <image style="width:250rpx;height:250rpx" src="./start.gif"></image>
+    </view>
+    <view style="height:150rpx">
+      <text>小病AI看，大病不用等</text>
+    </view>
+  </view>
+</view>
+
