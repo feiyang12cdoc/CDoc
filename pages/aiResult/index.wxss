@@ -1,1 +1,57 @@
 /* pages/aiResult/index.wxss */
+page {
+  background: #fdeb17;
+}
+
+.card_bg {
+  width: 95%;
+  background-color: #fff;
+  margin: 20rpx auto 0;
+  height: 400px;
+  border-radius: 20rpx;
+}
+
+.card_fun_bg {
+  width: 95%;
+  background-color: #fff;
+  margin: 20rpx auto 0;
+  height: 150px;
+  border-radius: 20rpx;
+}
+
+.title {
+  text-align: left;
+  font-family: SourceHanSansSC-regular;
+  margin-top: 20rpx;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-size: 20px;
+  padding-top: 60rpx;
+  padding-left: 70rpx;
+  font-weight: bold;
+}
+
+.result {
+  text-align: left;
+  font-family: SourceHanSansSC-regular;
+  margin-top: 20rpx;
+  color: rgb(82, 81, 81);
+  z-index: 1;
+  font-size: 36px;
+  padding-top: 30rpx;
+  padding-left: 70rpx;
+  padding-right: 70rpx;
+  font-weight: bold;
+}
+
+.recommendedMedication{
+  text-size-adjust: 12rpx;
+}
+
+.medicalConsultation{
+  text-size-adjust: 12rpx;
+}
+
+.mapAuery{
+  text-size-adjust: 12rpx;
+}

@@ -12,7 +12,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({ aiResult: "病毒性感冒哈哈哈哈哈哈哈哈哈哈"
+    + "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈" })
   },
 
   /**

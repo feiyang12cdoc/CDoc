@@ -48,12 +48,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "pages/symptomsAnalysis/index",
 					"pathName": "pages/symptomsAnalysis/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aiResult/index",
+					"pathName": "pages/aiResult/index",
 					"scene": null
 				}
 			]

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "AI结果",
+  "navigationBarBackgroundColor": "#FDEB17",
+  "navigationBarTextStyle": "black"
 }
