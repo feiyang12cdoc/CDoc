@@ -5,9 +5,12 @@
     "pages/recommendedMedication/index",
     "pages/medicalConsultation/index",
     "pages/mapAuery/index",
+
+    "pages/personalInformation/index"
     "pages/outpatientInformation/index",
     "pages/logs/logs",
-    "pages/personalInformation/index"
+    "pages/aiResult/index",
+    "pages/fastDiagnose/fast"
   ],
   "permission": {
     "scope.userLocation": {
@@ -16,9 +19,10 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#F8E71C",
+    "navigationBarTitleText": "CDoc",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F8E71C"
   },
   "sitemapLocation": "sitemap.json"
 }
