@@ -6,7 +6,7 @@
     "pages/medicalConsultation/index",
     "pages/mapAuery/index",
 
-    "pages/personalInformation/index"
+    "pages/personalInformation/index",
     "pages/outpatientInformation/index",
     "pages/logs/logs",
     "pages/aiResult/index",
