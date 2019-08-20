@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-/* pages/medicalConsultation/index.wxss */
-=======
+
 /* pages/medicalConsultation/index.wxss */
 
 page{
@@ -65,4 +63,4 @@ page{
 
 
 .flex-wrp {display: flex;}
->>>>>>> local_medicalCOnsultation
+
