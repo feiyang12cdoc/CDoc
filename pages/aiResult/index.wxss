@@ -17,6 +17,21 @@ page {
   margin: 20rpx auto 0;
   height: 150px;
   border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+
+.image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx auto;
 }
 
 .title {
