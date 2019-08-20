@@ -8,7 +8,8 @@
     "pages/outpatientInformation/index",
     "pages/logs/logs",
     "pages/aiResult/index",
-    "pages/fastDiagnose/fast"
+    "pages/fastDiagnose/fast",
+    "pages/entry/index"
   ],
   "permission": {
     "scope.userLocation": {

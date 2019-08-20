@@ -75,6 +75,9 @@ Page({
     })
   }, 
   btnSubmit: function(){
+    wx.redirectTo({
+      url: '/pages/aiResult/index'
+    })
     wx.request({
       url: '', //和后台交互的地址，默认是json数据交互，由于我的就是json，这里就没有对header进行编写
       data: this.data['output'],

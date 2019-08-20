@@ -1,0 +1,13 @@
+<!--pages/entry/index.wxml-->
+<view class="whitebg">
+  <navigator url="/pages/fastDiagnose/fast" class="yellowCircle">
+    <view class="title">上传图片确诊</view>
+  </navigator>
+</view>
+
+<view class="yellowbg">
+  <navigator url="/pages/symptomsAnalysis/index" class="whiteCircle">
+  <view class="title">AI确诊</view>
+  </navigator>
+</view>
+

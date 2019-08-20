@@ -61,7 +61,7 @@ Page({
     // 自动跳转
     setTimeout(()=>{
       wx.redirectTo({
-        url: '/pages/aiResult/index'
+        url: '/pages/entry/index'
       })
     },1500)
 

@@ -1,5 +1,5 @@
+/* pages/entry/index.wxss */
 /**index.wxss**/
-
 
 page {
   height: 100%;
@@ -42,52 +42,8 @@ page {
     border: 0 solid #fdeb17;
     border-radius: 500px;
 }
-image {
-   width:250rpx;
-   height:250rpx;
-}
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
-
-navigator {
-  color: red;
-}
-
-page{
-  background: #F8E71C;
-}
-.pannel-start{
-  background: #ffffff;
-  width: 100%;
-  margin-top: 70rpx;
-  height: 1150rpx;
-}
-.content{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  font-size:  40rpx;
-  font-family: Roboto;
-  font-weight: bold;
+.title {
+  line-height: 350rpx;
+  text-align: center;
 }
 
