@@ -1,0 +1,21 @@
+<!--pages/aiResult/index.wxml-->
+<view class="page-body">
+  <progress percent="{{questionPercent}}" color="black" backgroundColor="#FDEB17" active />
+
+  <view class='card_bg'>
+    <view class="title">检测结果：</view>
+    <view decode="{{true}}" class="result">{{aiResult}}</view>
+  </view>
+  <view class='card_fun_bg'>
+    <navigator url="/pages/recommendedMedication/index" class="recommendedMedication">
+      <text>药品推荐</text>
+    </navigator>
+    <navigator url="/pages/medicalConsultation/index" class="medicalConsultation">
+      <text>在线问诊</text>
+    </navigator>
+    <navigator url="/pages/mapAuery/index" class="mapAuery">
+      <text>极速挂号</text>
+    </navigator>
+  </view>
+
+</view>

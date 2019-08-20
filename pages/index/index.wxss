@@ -1,4 +1,47 @@
 /**index.wxss**/
+
+page {
+  height: 100%;
+}
+
+.whitebg{
+  background: #ffffff;
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yellowbg {
+  background: #fdeb17;
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whiteCircle{
+    width: 350rpx;
+    height: 350rpx;
+    background: #ffffff;
+    border: 0 solid #ffffff;
+    vertical-align: center;
+    border-radius: 500px;
+}
+
+.yellowCircle{
+    width: 350rpx;
+    height: 350rpx;
+    vertical-align: center;
+    background: #fdeb17;
+    border: 0 solid #fdeb17;
+    border-radius: 500px;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -19,6 +62,7 @@
 .usermotto {
   margin-top: 200px;
 }
+
 navigator {
   color: red;
 }

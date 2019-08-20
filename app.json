@@ -6,6 +6,7 @@
     "pages/medicalConsultation/index", 
     "pages/mapAuery/index",
     "pages/outpatientInformation/index", 
+    "pages/aiResult/index",
     "pages/logs/logs"
   ],
   "window": {
