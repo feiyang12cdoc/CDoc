@@ -2,15 +2,78 @@
 page{
   background: #F8E71C;
 }
-.container{
-  width: 700rpx;
+.pannel{
+  width:90%;
+  height: 100%;
+  padding: 30rpx 20rpx;
   margin: 0 auto;
-  padding: 5 5;
   background: #ffffff;
-  border-radius: 7px; 
+  border-radius: 7px;
+
+}
+.input{
+  display:flex; 
+  flex-direction:row; 
+  width: 100%;
+  height: 40%;
+  align-items: center;
 }
 .select-image{
-  width: 300rpx;
+  width: 350rpx;
   height: 300rpx;
   background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8c8c8c;
+  font-size: 24rpx; 
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.tip{
+  width:60%;
+  margin-left: 20rpx;
+  color: #8c8c8c;
+  font-size: 24rpx;
+}
+
+.output{
+  width: 100%;
+  background: #e3e3e0;
+  margin-top: 20rpx;
+  color: #8c8c8c;
+  font-size: 30rpx;
+  text-align: center;
+  padding: 20rpx 0rpx;
+}
+.table{
+  margin: 20rpx;
+}
+.row{
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.col1{
+  width: 30%;
+}
+.col2{
+  width: 70%;
+}
+.row1{
+  border-top:  4rpx solid #000000;
+  border-bottom:   1rpx solid #000000;
+}
+.row-last{
+  border-bottom:   4rpx solid #000000;
+}
+.btnSubmit{
+  width:700rpx; 
+  height:80rpx;
+  line-height:80rpx;
+  margin: 20rpx auto;
 }
