@@ -4,10 +4,35 @@ Page({
   /**
    * 页面的初始数据
    */
+  
+  
   data: {
-
+    loading: false,
+    list: [
+      {
+        "id": 1, 
+        "photo": "./img/e32a706f6f6c6f6f6c6f6fdc01.jpg",
+        "name": "医生1",
+        "departments": "口腔科",
+        "hospital":"广东省深圳医院",
+        "features": "骨性牙列不齐，各种正畸技术",
+        "tag":["从业12年","快速回复"],
+        "score":4.8,
+        "answer":450,
+      },
+      {
+        "id": 2,
+        "photo": "./img/e32a706f6f6c6f6f6c6f6fdc01.jpg",
+        "name": "医生2",
+        "departments": "口腔科",
+        "hospital": "广东省北京大学深圳医院",
+        "features": "骨性：各种正畸技术",
+        "tag": ["从业5年", "快速回复"],
+        "score": 4.8,
+        "answer": 450,
+      },
+    ]
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
