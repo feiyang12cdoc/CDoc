@@ -6,7 +6,8 @@
     "pages/medicalConsultation/index",
     "pages/mapAuery/index",
     "pages/outpatientInformation/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/fastDiagnose/fast"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,16 @@
+/* pages/fastDiagnose/fast.wxss */
+page{
+  background: #F8E71C;
+}
+.container{
+  width: 700rpx;
+  margin: 0 auto;
+  padding: 5 5;
+  background: #ffffff;
+  border-radius: 7px; 
+}
+.select-image{
+  width: 300rpx;
+  height: 300rpx;
+  background: #f4f4f4;
+}

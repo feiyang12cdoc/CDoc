@@ -1,0 +1,9 @@
+<!--pages/fastDiagnose/fast.wxml-->
+<view class="container" style="display:flex; flex-direction:column;"> 
+  <view style="display:flex; flex-direction:row;">
+    <view class="select-image">
+    </view>
+    <text>hello</text>
+  </view>
+  <text>output</text>
+</view>
