@@ -14,7 +14,7 @@
       </button>
     </view>
   </view>
-  <view class="output"  >
+  <view class="output"  hidden="{{tt}}">
     <view  hidden="{{!hideOutput}}" >
       <image src="./loading.gif"  class="loading" ></image>
     </view>

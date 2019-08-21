@@ -10,6 +10,7 @@ Page({
     backgroudImage:"",
     showUploadBtn: false,
     hideOutput:false,
+    tt:false,
     output:{
       sex:"",
       age:"",
@@ -59,6 +60,10 @@ Page({
   },
   uploadImage: function(){
     var that = this; 
+    // 启用动画
+    that.setData({
+      hideOutput: true,
+    })
     wx.uploadFile({
       url: 'https://wuwei.soft.360.cn/feiYang/updateCase',
       header:{
@@ -70,17 +75,25 @@ Page({
         'user': 'test'
       },
       success(res) {
+        var data = JSON.parse(res.data).data
         //do something
-        var data=JSON.parse(res.data).data
-        that.setData({
-          output:{
-            sex: data.sex[0],
-            age: data.age[0],
-            zz: data.zz[0],
-            bing: data.bing[0]
-          },
-          disableSubmitBtn: false
-        })
+        setTimeout(() => {
+          that.setData({
+            hideOutput: false,
+          })
+          that.setData({
+            output: {
+              sex: data.sex[0],
+              age: data.age[0],
+              zz: data.zz[0],
+              bing: data.bing[0]
+            },
+            disableSubmitBtn: false
+          })
+        }, 2500)
+        // 
+        
+        
         // wx.showToast({
         //   title: "上传成功",
         //   icon: 'success',
@@ -94,14 +107,7 @@ Page({
         })
       }
     })
-    this.setData({
-      hideOutput: true,
-    })
-    setTimeout(() => {
-      this.setData({
-        hideOutput: false,
-      })
-    }, 2500)
+
   }, 
   btnSubmit: function(e){
     var that2 = this 
