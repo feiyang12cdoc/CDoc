@@ -12,6 +12,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var ctx = wx.createCanvasContext("cline");
+    ctx.setLineWidth(4);
+    ctx.moveTo(275, 2);
+    ctx.lineTo(375, 2);
+    ctx.moveTo(275, 2);
+    ctx.lineTo(100, 723);
+    ctx.lineTo(350, 650);
+    ctx.stroke();
+    ctx.draw();
+    
 
   },
 
