@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    disableSubmitBtn:true,
     filepaths:"",
     backgroudImage:"",
     showUploadBtn: false,
@@ -64,7 +65,8 @@ Page({
             age: data.age[0],
             zz: data.zz[0],
             bing: data.bing[0]
-          }
+          },
+          disableSubmitBtn: false
         })
         wx.showToast({
           title: "上传成功",
