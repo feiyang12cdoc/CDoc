@@ -72,6 +72,11 @@ Page({
     that.mapCtx.moveToLocation({});
   },
   // 
+  getDoctor11() {
+    wx.navigateTo({
+      url: '/pages/medicalConsultation/index?id=1'
+    })
+  },
   moveToCurrentLocation() {
     let that = this;
     setTimeout(()=>{

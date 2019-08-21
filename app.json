@@ -8,7 +8,8 @@
     "pages/logs/logs",
     "pages/aiResult/index",
     "pages/fastDiagnose/fast",
-    "pages/entry/index"
+    "pages/entry/index",
+    "pages/symptom/index"
   ],
   "permission": {
     "scope.userLocation": {

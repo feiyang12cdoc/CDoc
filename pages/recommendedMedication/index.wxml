@@ -5,15 +5,15 @@
 
   <block class="" wx:for="{{list}}" wx:key="id">
     <navigator url='./list/item?id={{item.id}}'>
-      <view class="item" hover-class='hover-class' id="{{item.consumption_id}}" style=''>
+      <view class="item" hover-class='hover-class' id="{{item.id}}" style=''>
         <!--左边图片-->
         <view style='width:128rpx; height:128rpx; margin:20rpx;'>
-          <image class='index-logo' style='width:128rpx; height:128rpx' src="{{item.photo}}"></image>
+          <image class='index-logo' style='width:128rpx; height:128rpx' src="{{item.img}}"></image>
         </view>
         <!-- 右边内容 上下结构 -->
         <view style='display:flex; flex-direction:column; margin:20rpx;'>
           <label class='item_title'>{{item.name}}</label>
-          <label class='item_content'>{{item.description}}</label>
+          <label class='item_content'>{{item.adverse_reactions}}</label>
           <!-- 右边底部内容 左右结构 -->
           <view style='display:flex; flex-direction:row; height:20rpx;'>
             <label class='item_from'>{{item.usage}}</label>
