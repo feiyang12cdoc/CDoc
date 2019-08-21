@@ -46,11 +46,11 @@ Page({
   onLoad: function (options) {
     var that = this       //很重要，一定要写
     wx.request({
-      url: '',//和后台交互的地址，默认是json数据交互，由于我的就是json，这里就没有对header进行编写
+      url: 'https://wuwei.soft.360.cn/feiYang/getDrugs',
       data: {},
       method: 'POST',
       success: function (res) {
-        var datas = res.data;//res.data就是从后台接收到的值
+        var datas = res.data.data;//res.data就是从后台接收到的值
         for (var i = 0; i < datas.length; i++) {
           datas[i]["consumption_date"] = time.formatTime(new Date(datas[i]["consumption_date"]))
         }
