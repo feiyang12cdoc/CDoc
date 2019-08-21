@@ -1,0 +1,67 @@
+<!--pages/fastDiagnose/fast.wxml-->
+<view class="pannel">
+  <view class="input">
+    <view class="select-image" style="background-image: {{backgroudImage}}">
+      <image hidden="{{showUploadBtn}}" src="./add.svg" bindtap="selectImage" style="height:60rpx;width:60rpx;">
+      </image>
+      <text hidden="{{showUploadBtn}}" style="margin-top: 34rpx;">添加病例照片</text>
+      <text class="tip">上传附件不对外公开，保证隐私</text>
+      <button hidden="{{!showUploadBtn}}" style="width:200rpx;" size="mini" type="primary" bindtap="uploadImage">
+        上传
+      </button>
+      <button hidden="{{!showUploadBtn}}" style="width:200rpx;margin-top:20rpx;" size="mini" bindtap="selectImage">
+        重新选择
+      </button>
+    </view>
+
+  </view>
+  <view class="output">
+    <text class="labelWord">病例识别结果</text>
+    <view class="table" style="display:flex;flex-direction:column;">
+      <view class="row row1">
+        <view class="col1">
+          <text class="labelWord">类别</text>
+        </view>
+        <view class="col2">
+          <text class="labelWord">内容</text>
+        </view>
+      </view>
+      <view class="row">
+        <view class="col1">
+          <text class="labelWord">性别</text>
+        </view>
+        <view class="col2">
+          <textarea style="width:100%" auto-height="true" type="text" value="{{output['sex']}}" />
+        </view>
+      </view>
+
+      <view class="row">
+        <view class="col1">
+          <text class="labelWord">年龄</text>
+        </view>
+        <view class="col2">
+          <textarea style="width:100%" auto-height="true" type="text" value="{{output['age']}}" />
+        </view>
+      </view>
+
+      <view class="row">
+        <view class="col1">
+          <text class="labelWord">症状</text>
+        </view>
+        <view class="col2">
+          <textarea style="width:100%" auto-height="true" type="text" value="{{output['zz']}}" />
+        </view>
+      </view>
+      <view class="row row-last">
+        <view class="col1">
+          <text class="labelWord">病情</text>
+        </view>
+        <view class="col2">
+          <textarea style="width:100%" auto-height="true" type="text" value="{{output['bing']}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tip">以上结果为AI识别结果如与真实情况有出入可直接进行修改</view>
+</view>
+<button class="btnSubmit" bindtap="btnSubmit">提交</button>

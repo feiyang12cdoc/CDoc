@@ -1,0 +1,92 @@
+/* pages/fastDiagnose/fast.wxss */
+page{
+  background: #F8E71C;
+}
+.pannel{
+  width:90%;
+  height: 850rpx;
+  padding: 30rpx 20rpx;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 7px;
+
+}
+.input{
+  display:flex; 
+  flex-direction:row; 
+  width: 100%;
+  height: 40%;
+  align-items: center;
+}
+.select-image{
+  width: 100%;
+  height: 350rpx;
+  background: #ecebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8c8c8c;
+  margin-top: 30rpx;
+  font-size: 24rpx; 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 7px;
+}
+
+.tip{
+  margin-top:10rpx; 
+  color: #8c8c8c;
+  font-size: 23rpx;
+  text-align: center;
+}
+
+.output{
+  width: 100%;
+  background: #e3e3e0;
+  margin-top: 50rpx;
+  color: #8c8c8c;
+  font-size: 30rpx;
+  text-align: center;
+  padding: 20rpx 0rpx;
+  border-radius: 7px;
+}
+.table{
+  margin: 20rpx;
+}
+.row{
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.col1{
+  width: 30%;
+}
+.col2{
+  width: 70%;
+}
+.row1{
+  border-top:  4rpx solid #000000;
+  border-bottom:   1rpx solid #000000;
+}
+.row-last{
+  border-bottom:   4rpx solid #000000;
+}
+.btnSubmit{
+  width:600rpx; 
+  height:80rpx;
+  margin-top: 80rpx; 
+  color:#000000;
+  background-color: rgba(253, 235, 23);
+  font-family: Roboto;
+  font-weight: bold;
+  border: 6rpx solid #ffffff;
+  line-height: 65rpx;
+}
+
+.labelWord{
+  color:#000000;
+  font-family: Roboto;
+  font-weight: bold;
+}

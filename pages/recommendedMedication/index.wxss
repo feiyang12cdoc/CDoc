@@ -1,1 +1,45 @@
 /* pages/recommendedMedication/index.wxss */
+page{
+  background: #F8E71C;
+}
+.container{
+  padding: 0 0;
+}
+.item_content{
+  width: 90%;
+  height: 100rpx;
+  font-size: 11pt;
+  color: #888;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item_from{
+  width: 550rpx;
+  font-size: 10pt;
+  color: #999;
+}
+.item_time{
+  width: 100%;
+  font-size: 10pt;
+  color: #999;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-left: 40rpx;
+}
+.hover-class{
+  background-color: #ffffff;
+}
+.item{
+  display:flex;
+  height: 200rpx;  
+  width: 700rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #DBDBDB;
+  box-shadow: 2px 3px 1px 0px rgba(170, 170, 170, 1);
+  border: 1px solid #ffffff;  
+  border-radius: 20px;
+  
+}

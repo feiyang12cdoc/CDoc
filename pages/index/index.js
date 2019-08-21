@@ -55,6 +55,16 @@ Page({
         }
       })
     }
+    wx.setNavigationBarTitle({
+      title: ""
+    })
+    // 自动跳转
+    setTimeout(()=>{
+      wx.redirectTo({
+        url: '/pages/entry/index'
+      })
+    },1500)
+
   },
   getUserInfo: function(e) {
     console.log(e)
