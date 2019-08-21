@@ -7,9 +7,17 @@ page {
 .card_bg {
   width: 95%;
   background-color: #fff;
-  margin: 20rpx auto 0;
+  margin: 20rpx auto 20rpx;
   height: 518px;
   border-radius: 20rpx;
+}
+
+.card_all {
+  width: 95%;
+  background-color: #fff;
+  margin: 20rpx auto 20rpx;
+  border-radius: 20rpx;
+  padding-bottom: 20rpx;
 }
 
 .title {
@@ -25,7 +33,7 @@ page {
 
 .card_yellow {
   width: 322px;
-  height: 50px;
+  /* height: 50px; */
   border-radius: 7px;
   background-color: rgba(253, 235, 23);
   color: rgba(16, 16, 16, 1);
@@ -35,4 +43,19 @@ page {
   font-family: Roboto;
   font-weight: bold;
   margin: 20rpx auto;
+}
+
+.card_button {
+  width: 322px;
+  /* height: 50px; */
+  border-radius: 7px;
+  border: 2px solid rgba(255,255,255);
+  color: rgba(16, 16, 16, 1);
+  background-color: rgba(253, 235, 23);
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: bold;
+  margin: 15rpx auto;
 }

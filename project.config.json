@@ -93,8 +93,9 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/outpatientInformation/index",
-					"pathName": "pages/outpatientInformation/index",
+					"name": "pages/medicalConsultation/index",
+					"pathName": "pages/medicalConsultation/index",
+					"query": "",
 					"scene": null
 				}
 			]
