@@ -10,6 +10,7 @@ Page({
     longitude: '', // 当前位置精度
     markers: [], // 标记
     hospitalList: [],
+    polyline: '',
     doctorList: [
       { 
         name:'AI医生',
@@ -68,7 +69,6 @@ Page({
   // 移动到当前位置
   moveToLocation() {
     let that = this;
-    console.log('移动', that.data.longitude,that.data.latitude);
     that.mapCtx.moveToLocation({});
   },
   // 
@@ -77,8 +77,11 @@ Page({
     setTimeout(()=>{
       wx.getLocation({
         success: function (res) {
-          console.log("onReady1111");
           that.moveToLocation({
+            latitude: res.latitude,
+            longitude: res.longitude
+          });
+          that.setData({
             latitude: res.latitude,
             longitude: res.longitude
           });
@@ -123,36 +126,45 @@ Page({
   },
   // 规划路线
   goDestination: function (to) {
+    let that = this;
+    let from1 = {
+      latitude: that.data.latitude,
+      longitude: that.data.longitude
+    };
+    console.log(from1)
+    to = {
+      latitude: "39.9123450000", 
+      longitude:"116.4159620000"
+    }
     //调用距离计算接口
     qqmapsdk.direction({
-      mode: 'driving',//可选值：'driving'（驾车）、'walking'（步行）、'bicycling'（骑行），不填默认：'driving',可不填
-      //from参数不填默认当前地址
-      //       from: e.detail.value.start,
+      mode: 'driving',//可选值：'driving'（驾车）、'walking'（步行）、'bicycling'（骑行），不填
+      from : from1,
       to: to,
       success: function (res) {
         console.log(res);
-        // var ret = res;
-        // var coors = ret.result.routes[0].polyline, pl = [];
-        // //坐标解压（返回的点串坐标，通过前向差分进行压缩）
-        // var kr = 1000000;
-        // for (var i = 2; i < coors.length; i++) {
-        //   coors[i] = Number(coors[i - 2]) + Number(coors[i]) / kr;
-        // }
-        // //将解压后的坐标放入点串数组pl中
-        // for (var i = 0; i < coors.length; i += 2) {
-        //   pl.push({ latitude: coors[i], longitude: coors[i + 1] })
-        // }
-        // console.log(pl)
-        //设置polyline属性，将路线显示出来,将解压坐标第一个数据作为起点
-        // _this.setData({
-        //   latitude: pl[0].latitude,
-        //   longitude: pl[0].longitude,
-        //   polyline: [{
-        //     points: pl,
-        //     color: '#FF0000DD',
-        //     width: 4
-        //   }]
-        // })
+        var ret = res;
+        var coors = ret.result.routes[0].polyline, pl = [];
+        //坐标解压（返回的点串坐标，通过前向差分进行压缩）
+        var kr = 1000000;
+        for (var i = 2; i < coors.length; i++) {
+          coors[i] = Number(coors[i - 2]) + Number(coors[i]) / kr;
+        }
+        //将解压后的坐标放入点串数组pl中
+        for (var i = 0; i < coors.length; i += 2) {
+          pl.push({ latitude: coors[i], longitude: coors[i + 1] })
+        }
+        console.log(pl)
+        // 设置polyline属性，将路线显示出来,将解压坐标第一个数据作为起点
+        that.setData({
+          latitude: pl[0].latitude,
+          longitude: pl[0].longitude,
+          polyline: [{
+            points: pl,
+            color: '#0f0',
+            width: 4
+          }]
+        })
       },
       fail: function (error) {
         console.error(error);
@@ -169,7 +181,6 @@ Page({
     qqmapsdk.search({
       keyword: '医院',
       success:  (res) => {
-        console.log(res, res.message);
         let hospitalInfo = res.data;
         // that.goDestination({
         //   latitude: hospitalInfo[0].location.lat,
@@ -232,7 +243,7 @@ Page({
     },100)
     that.getHospital();
     that.getDoctor();
-
+    that.goDestination();
   },
   getDoctor() {
     let that = this;
@@ -243,9 +254,7 @@ Page({
       },
       method: 'GET',
       success: function (res) {
-        console.log('res',res);
         that.setData({ doctorList: res.data.data })
-        console.log(that.data.doctorList);
       },
       fail: function (res) {
         console.log('submit fail');
