@@ -1,12 +1,10 @@
-<!--index.wxml-->
-
-
+<!--首页开屏 index.wxml-->
 <view class="pannel-start">
   <view class="content" >
     <view>
       <image src="./start.gif"></image>
     </view>
-    <view style="height:150rpx">
+    <view>
       <text>小病AI看，大病不用等</text>
     </view>
   </view>
