@@ -64,4 +64,4 @@
   </view>
   <view class="tip">以上结果为AI识别结果如与真实情况有出入可直接进行修改</view>
 </view>
-<button class="btnSubmit" bindtap="btnSubmit">提交</button>
+<button class="btnSubmit" bindtap="btnSubmit" disabled="{{disableSubmitBtn}}">提交</button>
