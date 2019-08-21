@@ -1,15 +1,6 @@
 <!--pages/medicalConsultation/index.wxml-->
-
-<view class="title">在线问诊\n</view>
-
-
-
-
-
-
 <view class='container'>
   <loading hidden="{{!loading}}">加载中</loading>
-
   <block class="" wx:for="{{list}}" wx:key="id">
     <navigator url='./list/item?id={{item.id}}'>
       <view class="item" hover-class='hover-class' id="{{item.consumption_id}}" style=''>

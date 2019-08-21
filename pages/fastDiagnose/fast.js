@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    disableSubmitBtn:true,
     filepaths:"",
     backgroudImage:"",
     showUploadBtn: false,
@@ -64,7 +65,8 @@ Page({
             age: data.age[0],
             zz: data.zz[0],
             bing: data.bing[0]
-          }
+          },
+          disableSubmitBtn: false
         })
         wx.showToast({
           title: "上传成功",
@@ -80,20 +82,12 @@ Page({
       }
     })
   }, 
-  btnSubmit: function(){
-    var that=this;
-    // 跳转到诊断页--假数据
-    wx.navigateTo({
-      url: '/pages/aiResult/index',
-      success: function (res) {
-        // 通过eventChannel向被打开页面传送数据
-        res.eventChannel.emit('dataFromFastDiagnose', { data: that.data['output'] })
-      }
-    })    
+  btnSubmit: function(e){
+    var that2 = this 
 
     wx.request({
       url: 'https://wuwei.soft.360.cn/feiYang/aiDiagnose', 
-      data: this.data['output'],
+      data: that2.data['output'],
       method: 'POST',
       success: function (res) {
         // 诊断中...
@@ -103,7 +97,7 @@ Page({
             url: '/pages/aiResult/index',
             success: function (res) {
               // 通过eventChannel向被打开页面传送数据
-              res.eventChannel.emit('acceptDataFromOpenerPage', { data: res.data })
+              res.eventChannel.emit('acceptDataFromOpenerPage', { data: that2.data })
             }
           })        
         }

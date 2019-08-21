@@ -1,6 +1,5 @@
 // pages/aiResult/index.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -13,7 +12,14 @@ Page({
    */
   onLoad: function (options) {
     this.setData({ aiResult: "asdfas" })
-    
+    console.log(options)
+    // const eventChannel = this.getOpenerEventChannel()
+    // eventChannel.emit('acceptDataFromOpenedPage', { data: 'test' });
+    // eventChannel.emit('someEvent', { data: 'test' }); //dataFromFastDiagnose
+    // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
+    eventChannel.on('dataFromFastDiagnose', function (data) {
+      console.log('结果',data)
+    })
   },
 
   /**

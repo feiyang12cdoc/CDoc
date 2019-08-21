@@ -13,7 +13,7 @@
     ></map>
   </view>
   <view class = "wrap-list" >
-    <view class = "wrap-item" wx:for = "{{hospitalList}}" wx:key = "{{index}}"> 
+    <view class = "wrap-item" wx:for = "{{doctorList}}" wx:key = "{{index}}"> 
       <!-- <image class="wrap-item-image" src="{{item.doctorImg}}"></image>
       <view class="wrap-item-desc">
         <view class="wrap-item-name">{{item.name}}:{{item.doctorInfo}}</view>
@@ -22,10 +22,13 @@
           科室等待时间： {{item.departmentalWaitingTime}}
         </text>
       </view> -->
+        <image class="wrap-item-image" src="{{item.image}}"></image>
+
       <view class="wrap-item-desc">
-        <view class="wrap-item-name">{{item.name}}:{{item.address}}</view>
+        <view class="wrap-item-name">{{item.name}}:{{item.skilled}}</view>
         <text class="wrap-item-timelist">
-          医院分类：{{item.category}}
+          评分：{{item.score}}
+          医院：北京协和医院
         </text>
       </view>
     </view>

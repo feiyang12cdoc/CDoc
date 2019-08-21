@@ -3,18 +3,16 @@
   <progress percent="{{questionPercent}}" color="black" backgroundColor="#FDEB17" active />
 
   <view class='card_all' style="display:{{display_result}}">
-    <view wx:for="{{result_display}}" wx:for-index="index" wx:for-item="itemName" >
-      <view class='title' >
+    <view wx:for="{{result_display}}" wx:for-index="index" wx:for-item="itemName">
+      <view class='title_all'>
         {{index}}
       </view>
-    
-      <view class='card_yellow'>
-      {{itemName}}
+      <view class='card_yellow_all'>
+        {{itemName}}
       </view>
-      
     </view>
   </view>
-  <button class='card_button' bindtap='click_button' style="display:{{display_result}}" >开始诊断</button>
+  <button class='card_button' bindtap='click_button' style="display:{{display_result}}">开始诊断</button>
 
   <view class='card_bg' style="display:{{display_card}}">
     <view class='title'>{{question}}</view>

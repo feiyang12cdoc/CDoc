@@ -1,7 +1,7 @@
-<!--pages/entry/index.wxml-->
+<!--入口 pages/entry/index.wxml-->
 <view class="whitebg">
   <navigator url="/pages/fastDiagnose/fast" class="yellowCircle">
-    <view class="title">上传图片确诊</view>
+    <view class="title">快速确诊</view>
   </navigator>
 </view>
 

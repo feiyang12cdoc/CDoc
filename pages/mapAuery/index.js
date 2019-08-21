@@ -231,6 +231,29 @@ Page({
       that.moveToLocation();
     },100)
     that.getHospital();
+    that.getDoctor();
+
+  },
+  getDoctor() {
+    let that = this;
+    wx.request({
+      url: 'https://wuwei.soft.360.cn/feiYang/getDoctors',
+      data: {
+        hospitalNameList:'北京协和医院'
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log('res',res);
+        that.setData({ doctorList: res.data.data })
+        console.log(that.data.doctorList);
+      },
+      fail: function (res) {
+        console.log('submit fail');
+      },
+      complete: function (res) {
+        console.log('submit complete');
+      }
+    })
   },
  //点击markers
   markertap(e) {
