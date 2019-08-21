@@ -1,0 +1,17 @@
+<!--pages/symptom/index.wxml-->
+<view class="wrap-list">
+  <view class="wrap-item" bindtap="recommend">咳嗽</view>
+  <view class="wrap-item">发热</view>
+  <view class="wrap-item">头痛</view>
+  <view class="wrap-item">腹泻</view>
+  <view class="wrap-item">头晕</view>
+  <view class="wrap-item">牙痛</view>
+  <view class="more hide"></view>
+
+  <view class="more">更多>></view>
+
+</view>
+
+<navigator class = "AI" url="/pages/symptomsAnalysis/index">
+  AI问诊
+</navigator>
