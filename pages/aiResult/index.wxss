@@ -16,7 +16,7 @@ page {
   width: 95%;
   background-color: #fff;
   margin: 20rpx auto 0;
-  height: 150px;
+  height: 200rpx;
   border-radius: 20rpx;
   display: flex;
   flex-direction: row;
