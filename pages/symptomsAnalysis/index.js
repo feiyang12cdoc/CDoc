@@ -47,7 +47,7 @@ Page({
         console.log('submit fail');
       },
       complete: function (res) {
-        console.log('submit complete');
+        //console.log('submit complete');
       }
     })
   },
@@ -58,7 +58,7 @@ Page({
    * 用户点击答案
    */
   click_button: function(e){
-    var query = this.data.totalanswers;
+    var query = this.data.final_answer;
     console.log("end: " + query);
     wx.navigateTo({
       url: '/pages/aiResult/index?query=' + query ,
@@ -70,7 +70,7 @@ Page({
     var questionID = e.currentTarget.dataset['index'];
     var nextquestion = this.data.nextquestions[questionID];
     if (nextquestion !== '0'){
-      //nextquestion 不为0，问题继续进行
+      //nextquestion 不为0，还有后续问题
 
       wx.request({
         url: 'https://wuwei.soft.360.cn/feiYang/intelligentQA',
@@ -79,7 +79,6 @@ Page({
           'content-type': 'application/json' // 默认值
         },
         method: 'GET',
-        
         success: function (res) {
           var datas = res.data;
           var nextquestions = datas.data.question.split("#");  //下一次的所有问题
@@ -112,53 +111,52 @@ Page({
           console.log('submit fail');
         },
         complete: function (res) {
-          console.log('submit complete');
+          //console.log('submit complete');
+          
         }
       })
     }
     else{
       //nextquestion 为 0，问题结束
       //GET请求, 参数为 question 携带所有answer
-      //跳转页面，并传参
-
-      
+   
       var result_answers = this.data.totalanswers.split("|");
       var total_num = result_answers.length;
       var total_questions = this.data.total_questions;
       var result_display = {};
-      for(var i = 0; i < total_num; i ++){
-        // console.log("out_question: " + 　total_questions[i]);
-        // console.log("out_answer: " + result_answers[i]);
+      for(var i = 0; i < total_num; i ++)
         result_display[total_questions[i]] = result_answers[i];
-      }
-      // console.log("well done");
-
+      
+     
       wx.request({
         url: 'https://wuwei.soft.360.cn/feiYang/intelligentQAResult',
         data: { IntelligentQAResult: this.data.totalanswers },
         header: {
           'content-type': 'application/json' // 默认值
         },
-        method: 'GET',
-        
+        method: 'GET',     
         success: function (res) {
-          
-          that.setData({ display_card: "none" ,
-            display_result:"block",
+          console.log(res.data.data);
+          if (res.data.data){
+            that.setData({ final_answer: res.data.data, });
+          }
+          else{
+            that.setData({ final_answer: "未知疾病", });
+          }
+
+          that.setData({ 
+            display_card: "none" ,   //隐藏问答块
+            display_result:"block",   //显示所有问题和答案块
             result_answers: result_answers,
-            total_num: total_num,
             result_display: result_display,
             });
-          var datas = res.data;
-          console.log(datas.data);
       
-
         },
         fail: function (res) {
           console.log('submit fail');
         },
         complete: function (res) {
-          console.log('submit complete');
+          //console.log('submit complete');
         }
       })
       

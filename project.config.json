@@ -4,18 +4,26 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.0",
-	"appid": "wx81bc39c7fe633451",
-	"projectname": "CDOC1.0.0",
+	"appid": "wx49fa9ac3d334f5eb",
+	"projectname": "CDoc",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
