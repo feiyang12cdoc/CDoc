@@ -13,11 +13,14 @@
         重新选择
       </button>
     </view>
-
   </view>
-  <view class="output">
-    <text class="labelWord">病例识别结果</text>
-    <view class="table" style="display:flex;flex-direction:column;">
+  <view class="output"  >
+    <view  hidden="{{!hideOutput}}" >
+      <image src="./loading.gif"  class="loading" ></image>
+    </view>
+    <text class="tip" hidden="{{!hideOutput}}" >AI分析中...</text>
+    <text class="labelWord"  hidden="{{hideOutput}}" >病例识别结果</text>
+    <view class="table"  style="display:{{hideOutput ? 'none' : 'flex'}};flex-direction:column;"  >
       <view class="row row1">
         <view class="col1">
           <text class="labelWord">类别</text>
@@ -62,6 +65,6 @@
       </view>
     </view>
   </view>
-  <view class="tip">以上结果为AI识别结果如与真实情况有出入可直接进行修改</view>
+  <view class="tip" hidden="{{hideOutput}}">以上结果为AI由识别，如与真实情况有出入可直接修改</view>
 </view>
 <button class="btnSubmit" bindtap="btnSubmit" disabled="{{disableSubmitBtn}}">提交</button>

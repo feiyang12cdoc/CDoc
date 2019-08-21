@@ -9,6 +9,7 @@ Page({
     filepaths:"",
     backgroudImage:"",
     showUploadBtn: false,
+    hideOutput:false,
     output:{
       sex:"",
       age:"",
@@ -21,7 +22,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
   selectImage: function(){
     console.log("click");
@@ -68,11 +68,11 @@ Page({
           },
           disableSubmitBtn: false
         })
-        wx.showToast({
-          title: "上传成功",
-          icon: 'success',
-          duration: 2000
-        })
+        // wx.showToast({
+        //   title: "上传成功",
+        //   icon: 'success',
+        //   duration: 2000
+        // })
       },fail(res){
         wx.showToast({
           title: "上传失败",
@@ -81,6 +81,14 @@ Page({
         })
       }
     })
+    this.setData({
+      hideOutput: true,
+    })
+    setTimeout(() => {
+      this.setData({
+        hideOutput: false,
+      })
+    }, 2500)
   }, 
   btnSubmit: function(e){
     var that2 = this 
@@ -109,7 +117,6 @@ Page({
         console.log('submit complete');
       }
     })
-
   },
 
   /**
