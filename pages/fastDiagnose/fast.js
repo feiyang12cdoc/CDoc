@@ -8,7 +8,6 @@ Page({
     disableSubmitBtn:true,
     filepaths:"",
     backgroudImage:"",
-    hidden_temp_pic:true,
     showUploadBtn: false,
     hideOutput:false,
     output:{
@@ -35,13 +34,22 @@ Page({
         console.log("choose success");
         // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths;
+        // 图片转base64 作为背景
+        wx.getFileSystemManager().readFile({
+          filePath: res.tempFilePaths[0], //选择图片返回的相对路径
+          encoding: 'base64', //编码格式
+          success: res => { //成功的回调
+            // 更新view
+            that.setData({
+              filepaths: tempFilePaths[0],
+              backgroudImage: "url('data:image/png;base64," + res.data + "');",
+              showUploadBtn: true,
+            });
+            // console.log('data:image/png;base64,' + res.data)
+          }
+        })
 
-        // 更新view
-        that.setData({
-          filepaths: tempFilePaths[0],
-          hidden_temp_pic:false,
-          showUploadBtn:true,
-        });
+
         console.log(that.data.backgroudImage)
       },
       fail(res){
