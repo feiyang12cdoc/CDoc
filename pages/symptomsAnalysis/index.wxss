@@ -1,7 +1,7 @@
 /* pages/symptomsAnalysis/index.wxss */
 
 page {
-  /* background: #fdeb17; */
+  background: #fdeb17;
 }
 
 .card_bg {
@@ -15,7 +15,7 @@ page {
 
 .card_all {
   width: 95%;
-  background-color: #fff;
+  background-color: #eee;
   margin: 20rpx auto 20rpx;
   border-radius: 20rpx;
   padding-bottom: 48rpx;
@@ -46,7 +46,7 @@ page {
 .card_yellow {
   width: 322px;
   border-radius: 7px;
-  background-color: #eee;
+  background-color: #F8E71C;
   color: rgba(16, 16, 16, 1);
   font-size: 20px;
   line-height: 50px;
@@ -59,7 +59,7 @@ page {
 .card_yellow_all {
   width: 650rpx;
   border-radius: 7px;
-  background-color: #eee;
+  background-color: #F8E71C;
   color: rgba(16, 16, 16, 1);
   font-size: 40rpx;
   line-height: 35px;
@@ -74,7 +74,7 @@ page {
   border-radius: 7px;
   border: 2px solid rgba(255,255,255);
   color: rgba(16, 16, 16, 1);
-  background-color: #eee;
+  background-color: #F8E71C;
   font-size: 45rpx;
   line-height: 80rpx;
   text-align: center;
