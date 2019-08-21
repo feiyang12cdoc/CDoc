@@ -6,16 +6,16 @@
       <view class="item" hover-class='hover-class' id="{{item.consumption_id}}" style=''>
         <!--左边图片-->
         <view style='width:128rpx; height:128rpx; margin:15rpx;'>
-          <image class='index-logo' style='width:128rpx; height:128rpx' src="{{item.image}}"></image>
+          <image class='index-logo'src="{{item.image}}"></image>
         </view>
         <!-- 右边内容 上下结构 -->
-        <view style='display:flex; flex-direction:column; margin:10rpx;'>
+        <view class="item_parents">
           <label class='item_title'>{{item.name}} 主治医生</label>
           <label class='item_departments'>{{item.department}}  {{item.hospital}}</label>
           <label class='item_features'>擅长{{item.skilled}}</label>
           <label class='item_result'>评分{{item.score}} {{item.answer}}个回答</label>
           <!-- 右边底部内容 左右结构 -->
-          <view style='display:flex; flex-direction:row; height：20rpx;'>
+          <view class="item_tag">
             <label class='item_from'>{{item.tag}}</label>
             <!-- <label class='item_time'>{{item.consumption_date}}</label> -->
           </view>

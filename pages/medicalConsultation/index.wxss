@@ -1,29 +1,34 @@
-
 /* pages/medicalConsultation/index.wxss */
 
-page{
-  background: #F8E71C;
+page {
+  background: #f8e71c;
 }
 
+.index-logo {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 7px;
+  margin: 20rpx;
+}
 
-.title{
+.title {
   text-align: center;
   text-shadow: 1px 1px 1px #888;
 }
 
-.item{
-  display:flex;
-  height: 200rpx;  
+.item {
+  display: flex;
+  height: 200rpx;
   width: 700rpx;
-  background: #ffffff;
+  background: #fff;
   margin-top: 20rpx;
-  border-bottom: 1px solid #DBDBDB;
+  border-bottom: 1px solid #dbdbdb;
   box-shadow: 2px 3px 1px 0px rgba(170, 170, 170, 1);
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   border-radius: 20px;
-} 
+}
 
-.item_content{
+.item_content {
   width: 200px;
   height: 100rpx;
   font-size: 11pt;
@@ -33,9 +38,8 @@ page{
   overflow: hidden;
 }
 
-.item_departments{
+.item_departments {
   width: 200px;
-  
   color: rgba(94, 94, 94, 1);
   font-size: 12px;
   word-break: break-all;
@@ -43,16 +47,16 @@ page{
   overflow: hidden;
 }
 
-.item_features{
+.item_features {
   width: 200px;
   color: rgba(175, 175, 175, 1);
   font-size: 12px;
-  word-break: break-all;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.item_result{
+.item_result {
   width: 200px;
   color: rgba(225, 152, 0, 1);
   font-size: 12px;
@@ -61,6 +65,20 @@ page{
   overflow: hidden;
 }
 
+.item_parents {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
 
-.flex-wrp {display: flex;}
+.item_tag {
+  display: flex;
+  flex-direction: row;
+  height: 20rpx;
+  margin-bottom: 10rpx;
+}
 
+.flex-wrp {
+  display: flex;
+}
