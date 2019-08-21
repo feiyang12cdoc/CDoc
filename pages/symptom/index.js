@@ -27,7 +27,7 @@ Page({
       success: function (res1) {
         console.log(res1.data.data);
         wx.navigateTo({
-          url: '/pages/recommendedMedication/index',
+          url: '/pages/recommendedMedication/index?query=感冒',
           success: function (res) {
             // 通过eventChannel向被打开页面传送数据 acceptDataFromOpenerPage
             res.eventChannel.emit('acceptDataFromOpenerPage', { data: res1.data.data })

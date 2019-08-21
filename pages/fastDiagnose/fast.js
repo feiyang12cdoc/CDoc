@@ -8,6 +8,7 @@ Page({
     disableSubmitBtn:true,
     filepaths:"",
     backgroudImage:"",
+    hidden_temp_pic:true,
     showUploadBtn: false,
     hideOutput:false,
     output:{
@@ -38,9 +39,10 @@ Page({
         // 更新view
         that.setData({
           filepaths: tempFilePaths[0],
-          backgroudImage: "url('" + tempFilePaths[0] +"');",
+          hidden_temp_pic:false,
           showUploadBtn:true,
         });
+        console.log(that.data.backgroudImage)
       },
       fail(res){
         console.log("choose failed")
@@ -51,6 +53,9 @@ Page({
     var that = this; 
     wx.uploadFile({
       url: 'https://wuwei.soft.360.cn/feiYang/updateCase',
+      header:{
+        'content-type': 'multipart/form-data'
+      },
       filePath: this.data['filepaths'],
       name: 'file',
       formData: {

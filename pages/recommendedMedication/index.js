@@ -41,15 +41,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this       //很重要，一定要写
+    var that = this;       //很重要，一定要写
+    console.log('参数',options.query);
     wx.request({
       url: 'https://wuwei.soft.360.cn/feiYang/getDrugs',
+      data: {
+        symptom: options.query
+      },
       method: 'GET',
       success: function (res) {
         var datas = res.data.data;//res.data就是从后台接收到的值
-        for (var i = 0; i < datas.length; i++) {
-          datas[i]["consumption_date"] = time.formatTime(new Date(datas[i]["consumption_date"]))
-        }
+        console.log(datas);
         that.setData({//循环完后，再对list进行赋值
           list: datas,
           loading: false

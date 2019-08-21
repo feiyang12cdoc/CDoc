@@ -72,9 +72,11 @@ Page({
     that.mapCtx.moveToLocation({});
   },
   // 
-  getDoctor11() {
+  getDoctor11(e) {
+    console.log(e.currentTarget.dataset.hospital);
+    let hos = e.currentTarget.dataset.hospital;
     wx.navigateTo({
-      url: '/pages/medicalConsultation/index?id=1'
+      url: '/pages/medicalConsultation/index?query='+ hos
     })
   },
   moveToCurrentLocation() {
@@ -104,7 +106,9 @@ Page({
         name : item.title,
         address : item.address,
         location: item.location,
-        category: item.category
+        category: item.category,
+        departmentalWaitingTime: "1小时20分钟",
+        routeTime: '30分钟'
       };
       hospitalList.push(hospitalItem);
     });
@@ -144,7 +148,7 @@ Page({
     //调用距离计算接口
     qqmapsdk.direction({
       mode: 'driving',//可选值：'driving'（驾车）、'walking'（步行）、'bicycling'（骑行），不填
-      from : from1,
+      // from : from1,
       to: to,
       success: function (res) {
         console.log(res);

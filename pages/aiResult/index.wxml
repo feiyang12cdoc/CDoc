@@ -8,7 +8,7 @@
     
   </view>
   <view class='card_fun_bg'>
-    <navigator class="col" url="/pages/recommendedMedication/index" class="recommendedMedication">
+    <navigator class="col" url="/pages/recommendedMedication/index?query={{aiResult}}" class="recommendedMedication">
       <view class="imageDocker">
         <image src="./image/pills.png" class="image"></image>
       </view>

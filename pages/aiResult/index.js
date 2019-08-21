@@ -14,6 +14,8 @@ Page({
   onLoad: function (options) {
     
     let that = this;
+    console.log(options);
+
     if (options.query == "[object Object]"){
       const eventChannel = this.getOpenerEventChannel();
       // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
@@ -29,7 +31,6 @@ Page({
       })
     }
     else {
-      console.log(options);
       let str = options.query;
       if(str){
         let arr = str.split('#');
@@ -37,6 +38,7 @@ Page({
       }
       
     }
+    console.log('aiResult', that.data.aiResult);
   },
 
   /**
