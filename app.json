@@ -8,7 +8,8 @@
     "pages/logs/logs",
     "pages/aiResult/index",
     "pages/fastDiagnose/fast",
-    "pages/entry/index"
+    "pages/entry/index",
+    "pages/symptom/index"
   ],
   "permission": {
     "scope.userLocation": {
@@ -17,10 +18,11 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F8E71C",
+  "navigationBarBackgroundColor": "#FDEB17",
+  
     "navigationBarTitleText": "CDoc",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#F8E71C"
+    "backgroundColor": "#fff"
   },
   "sitemapLocation": "sitemap.json"
 }

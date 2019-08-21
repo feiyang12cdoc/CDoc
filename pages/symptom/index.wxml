@@ -1,0 +1,22 @@
+<!--pages/symptom/index.wxml-->
+<view class="wrap-list">
+  <view class="wrap-item" bindtap="recommend">感冒</view>
+  <view class="wrap-item">牙龈上火</view>
+  <view class="wrap-item">中耳炎</view>
+  <view class="wrap-item">过敏性鼻炎</view>
+  <view class="wrap-item">腹泻</view>
+  <view class="wrap-item">麦粒肿</view>
+  <view class="wrap-item">上呼吸道感染</view>
+    <view class="wrap-item">口腔溃疡</view>
+    <view class="wrap-item">脚气</view>
+  
+  <view class="more hide"></view>
+
+  <view class="more">更多>></view>
+
+</view>
+
+<navigator class = "AI" url="/pages/symptomsAnalysis/index">
+  AI问诊
+</navigator>
+

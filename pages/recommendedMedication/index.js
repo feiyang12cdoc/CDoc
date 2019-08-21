@@ -8,31 +8,28 @@ Page({
     loading:false,
     list:[
       {
-        "id":1,        "photo":"https://img.alicdn.com/imgextra/i2/2928278102/TB2BgbFXcoa61BjSspdXXajFVXa_!!2928278102.jpg_430x430q90.jpg",
+        "id":1,        "img":"https://img.alicdn.com/imgextra/i2/2928278102/TB2BgbFXcoa61BjSspdXXajFVXa_!!2928278102.jpg_430x430q90.jpg",
         "name":"气管炎丸",
-        "description":"散寒镇咳，祛痰定喘。用于外感风寒引起的咳嗽，气促哮喘，喉中发痒，痰涎壅盛，胸膈满闷，老年痰喘。",
+        "main_diseases":"散寒镇咳，祛痰定喘。用于外感风寒引起的咳嗽，气促哮喘，喉中发痒，痰涎壅盛，胸膈满闷，老年痰喘。",
         "usage":"口服，一次30粒，一日2次。",      
         "consumption_date":"consumption_date"
-
       },
       {
         "id":2,
-        "photo": "https://img.alicdn.com/imgextra/i1/858915326/TB2QUCSbrAlyKJjSZFBXXbtiFXa_!!858915326.jpg_430x430q90.jpg",
+        "img": "https://img.alicdn.com/imgextra/i1/858915326/TB2QUCSbrAlyKJjSZFBXXbtiFXa_!!858915326.jpg_430x430q90.jpg",
         "name": "阿莫西林",
-        "description": "上呼吸道感染 溃疡 咳痰 扁桃体发炎 疼痛 皮肤软组织感染",
+        "main_diseases": "上呼吸道感染 溃疡 咳痰 扁桃体发炎 疼痛 皮肤软组织感染",
         "usage": "成人1次2粒，每6-8小时一次。",
         "consumption_date": ""
-
       },
     ]
 
 
   },
   validate: function (data) {
-    console.log(data[0])
     for(var i =0; i<data.length;i++){
-      if (data[i]['description'].length > 30 ){
-        data[i]['description'] = data[i]['description'].substr(0,25)+"...";
+      if (data[i]['main_diseases'].length > 30 ){
+        data[i]['main_diseases'] = data[i]['main_diseases'].substr(0,25)+"...";
       }
     }
     this.setData({
@@ -47,8 +44,7 @@ Page({
     var that = this       //很重要，一定要写
     wx.request({
       url: 'https://wuwei.soft.360.cn/feiYang/getDrugs',
-      data: {},
-      method: 'POST',
+      method: 'GET',
       success: function (res) {
         var datas = res.data.data;//res.data就是从后台接收到的值
         for (var i = 0; i < datas.length; i++) {
@@ -65,6 +61,15 @@ Page({
       complete: function (res) {
         console.log('submit complete');
       }
+    })
+    const eventChannel = that.getOpenerEventChannel();
+
+    eventChannel.on('acceptDataFromOpenerPage', function (data) {
+      console.log('dataaaaaaaa', data);
+      that.setData({
+        list:data.data
+      });
+      console.log(that.data.list)
     })
     // 本地数据测试
     this.validate(this.data["list"]);

@@ -1,7 +1,7 @@
 /* pages/medicalConsultation/index.wxss */
 
 page {
-  background: #f8e71c;
+  /* background: #f8e71c; */
 }
 
 .index-logo {
@@ -15,10 +15,12 @@ page {
   text-align: center;
   text-shadow: 1px 1px 1px #888;
 }
-
+.item_from {
+  /* width: 50%; */
+}
 .item {
   display: flex;
-  height: 200rpx;
+  height: 270rpx;
   width: 700rpx;
   background: #fff;
   margin-top: 20rpx;
@@ -38,7 +40,7 @@ page {
   overflow: hidden;
 }
 
-.item_departments {
+.item_department{
   width: 200px;
   color: rgba(94, 94, 94, 1);
   font-size: 12px;
@@ -47,7 +49,7 @@ page {
   overflow: hidden;
 }
 
-.item_features {
+.item_skilled{
   width: 200px;
   color: rgba(175, 175, 175, 1);
   font-size: 12px;
@@ -73,8 +75,7 @@ page {
 }
 
 .item_tag {
-  display: flex;
-  flex-direction: row;
+  
   height: 20rpx;
   margin-bottom: 10rpx;
 }

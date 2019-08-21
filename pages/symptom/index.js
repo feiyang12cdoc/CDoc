@@ -1,38 +1,42 @@
-// pages/aiResult/index.js
+// pages/symptom/index.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    aiResult:{}
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    let that = this;
-    if (options.query == "[object Object]"){
-      const eventChannel = this.getOpenerEventChannel();
-      // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
-      eventChannel.on('acceptDataFromOpenerPage', function (data) {
-        let result = data.data;
-        that.setData({ aiResult: result.output.zz });
-        // 自动跳转
-        // setTimeout(() => {
-        //   wx.redirectTo({
-        //     url: '/pages/entry/index'
-        //   })
-        // }, 1500)
-      })
-    }
-    else {
-      console.log(options)
-      that.setData({ aiResult: options.query });
-    }
-  },
 
+  },
+  recommend: function(x) {
+    let that = this;
+    console.log(x);
+    wx.request({
+      url: 'https://wuwei.soft.360.cn/feiYang/getDrugs',
+      data: { symptom:  '咳嗽'},
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: 'GET',
+      success: function (res1) {
+        console.log(res1.data.data);
+        wx.navigateTo({
+          url: '/pages/recommendedMedication/index',
+          success: function (res) {
+            // 通过eventChannel向被打开页面传送数据 acceptDataFromOpenerPage
+            res.eventChannel.emit('acceptDataFromOpenerPage', { data: res1.data.data })
+
+          }
+        })    
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

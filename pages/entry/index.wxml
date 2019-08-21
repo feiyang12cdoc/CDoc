@@ -2,14 +2,13 @@
   <view class="content">
     <view class="uploadPicbg">
       <navigator url="/pages/fastDiagnose/fast" class="uploadPicCircle">
-        <view class="title">快速确诊</view>
+        <view class="title">慢性疾病</view>
       </navigator>
     </view>
 
     <view class="aiQuestbg">
-      <navigator url="/pages/symptomsAnalysis/index" class="aiQuestCircle">
-      <view class="title">AI问诊</view>
+      <navigator url="/pages/symptom/index" class="aiQuestCircle">
+      <view class="title">流行疾病</view>
       </navigator>
     </view>
-
   </view>

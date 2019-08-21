@@ -1,6 +1,6 @@
 <!--pages/symptomsAnalysis/index.wxml-->
 <view class="page-body">
-  <progress percent="{{questionPercent}}" color="#fff" backgroundColor="#FDEB17" active-mode />
+  <progress percent="{{questionPercent}}" color="black" backgroundColor="#F8E71C" active-mode />
 
   <view class='card_all' style="display:{{display_result}}">
     <view wx:for="{{result_display}}" wx:for-index="index" wx:for-item="itemName">
@@ -16,10 +16,21 @@
 
   <view class='card_bg' style="display:{{display_card}}">
     <view class='title'>{{question}}</view>
-    <view wx:for="{{selector}}" wx:for-index="idx" wx:for-item="itemName">
-      <view bindtap='click' data-item='{{itemName}}' data-index='{{idx}}' class='card_yellow'>{{itemName}}</view>
-    </view>
+  
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{selector}}" wx:for-item="itemName">
+      <view class="card_yellow" >
+          <checkbox value="{{itemName}}"  checked="{{itemName.checked}}" />
+          {{itemName}}
+          </view>
+      </label>
+    </checkbox-group>
   </view>
+   <button class='card_button' bindtap='click' style="display:{{display_card}}">下一项</button>
 
   <!-- <navigator url="/pages/recommendedMedication/index" hover-class="navigator-hover">跳转到下一页 >> </navigator> -->
 </view>
+
+
+
+    

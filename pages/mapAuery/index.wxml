@@ -14,24 +14,13 @@
     ></map>
   </view>
   <view class = "wrap-list" >
-    <view class = "wrap-item" wx:for = "{{doctorList}}" wx:key = "{{index}}"> 
-      <!-- <image class="wrap-item-image" src="{{item.doctorImg}}"></image>
-      <view class="wrap-item-desc">
-        <view class="wrap-item-name">{{item.name}}:{{item.doctorInfo}}</view>
+    <view class = "wrap-item" wx:for = "{{hospitalList}}" wx:key = "{{index}}"> 
+      <!-- <image class="wrap-item-image" src="{{item.doctorImg}}"></image> -->
+      <view class="wrap-item-desc" bindtap="getDoctor11">
+        <view class="wrap-item-name">{{item.name}}</view>
         <text class="wrap-item-timelist">
-          路程等待时间：{{item.routeWaitingTime}}
-          科室等待时间： {{item.departmentalWaitingTime}}
-        </text>
-      </view> -->
-        <image class="wrap-item-image" src="{{item.image}}"></image>
-
-      <view class="wrap-item-desc">
-        <view class="wrap-item-name">{{item.name}}:{{item.skilled}}</view>
-        <text class="wrap-item-timelist">
-          评分：{{item.score}}
-          医院：北京协和医院
-          排队时间： {{item.waitTime}}
-          路程时间: {{item.routeTime}}
+          地址：{{item.address}}
+          <!-- 科室等待时间： {{item.departmentalWaitingTime}} -->
         </text>
       </view>
     </view>
