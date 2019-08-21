@@ -4,7 +4,7 @@ page{
 }
 .pannel{
   width:90%;
-  height: 100%;
+  height: 850rpx;
   padding: 30rpx 20rpx;
   margin: 0 auto;
   background: #ffffff;
@@ -19,35 +19,37 @@ page{
   align-items: center;
 }
 .select-image{
-  width: 350rpx;
-  height: 300rpx;
-  background: #f4f4f4;
+  width: 100%;
+  height: 350rpx;
+  background: #ecebeb;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #8c8c8c;
+  margin-top: 30rpx;
   font-size: 24rpx; 
-
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  border-radius: 7px;
 }
 
 .tip{
-  width:60%;
-  margin-left: 20rpx;
+  margin-top:10rpx; 
   color: #8c8c8c;
-  font-size: 24rpx;
+  font-size: 23rpx;
+  text-align: center;
 }
 
 .output{
   width: 100%;
   background: #e3e3e0;
-  margin-top: 20rpx;
+  margin-top: 50rpx;
   color: #8c8c8c;
   font-size: 30rpx;
   text-align: center;
   padding: 20rpx 0rpx;
+  border-radius: 7px;
 }
 .table{
   margin: 20rpx;
@@ -72,8 +74,19 @@ page{
   border-bottom:   4rpx solid #000000;
 }
 .btnSubmit{
-  width:700rpx; 
+  width:600rpx; 
   height:80rpx;
-  line-height:80rpx;
-  margin: 20rpx auto;
+  margin-top: 80rpx; 
+  color:#000000;
+  background-color: rgba(253, 235, 23);
+  font-family: Roboto;
+  font-weight: bold;
+  border: 6rpx solid #ffffff;
+  line-height: 65rpx;
+}
+
+.labelWord{
+  color:#000000;
+  font-family: Roboto;
+  font-weight: bold;
 }
