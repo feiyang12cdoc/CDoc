@@ -1,4 +1,7 @@
 /* pages/symptom/index.wxss */
+page {
+  background-color: #fff;
+}
 .wrap-item {
   width: 40%;
   float: left;
@@ -6,9 +9,9 @@
   font-size: 40rpx;
   color: rgba(16, 16, 16, 1);
   text-align: center;
-  font-weight: bold;
   box-shadow: 0 0 0 0;
   display: block;
+  background-color: #FDEB17;
 }
 .more {
   width: 45%;
@@ -24,7 +27,7 @@
   overflow: hidden;
 }
 .AI {
-  background-color: #eee;
+  background-color: #FDEB17;
   width: 200rpx;
   height: 200rpx;
   vertical-align: center;
@@ -32,6 +35,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
     margin-left: 80rpx;
 }
