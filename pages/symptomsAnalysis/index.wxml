@@ -1,6 +1,6 @@
 <!--pages/symptomsAnalysis/index.wxml-->
 <view class="page-body">
-  <progress percent="{{questionPercent}}" color="black" backgroundColor="#FDEB17" active />
+  <progress percent="{{questionPercent}}" color="#fff" backgroundColor="#FDEB17" active-mode />
 
   <view class='card_all' style="display:{{display_result}}">
     <view wx:for="{{result_display}}" wx:for-index="index" wx:for-item="itemName">

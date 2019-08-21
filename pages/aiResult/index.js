@@ -4,22 +4,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    aiResult:""
+    aiResult:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({ aiResult: "asdfas" })
-    console.log(options)
-    // const eventChannel = this.getOpenerEventChannel()
-    // eventChannel.emit('acceptDataFromOpenedPage', { data: 'test' });
-    // eventChannel.emit('someEvent', { data: 'test' }); //dataFromFastDiagnose
-    // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
-    eventChannel.on('dataFromFastDiagnose', function (data) {
-      console.log('结果',data)
-    })
+    
+    let that = this;
+    if (options.query == "[object Object]"){
+      const eventChannel = this.getOpenerEventChannel()
+      // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
+      eventChannel.on('acceptDataFromOpenerPage', function (data) {
+        let result = data.data;
+        that.setData({ aiResult: result.output.zz });
+        // 自动跳转
+        setTimeout(() => {
+          wx.redirectTo({
+            url: '/pages/entry/index'
+          })
+        }, 1500)
+      })
+    }
+    else {
+      console.log(options)
+      that.setData({ aiResult: options.query });
+    }
   },
 
   /**

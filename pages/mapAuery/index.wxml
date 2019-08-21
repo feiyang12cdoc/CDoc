@@ -10,6 +10,7 @@
       bindupdated="moveToCurrentLocation"
       bindmarkertap="markertap"
       show-location="true"
+      polyline="{{polyline}}"
     ></map>
   </view>
   <view class = "wrap-list" >
@@ -29,6 +30,8 @@
         <text class="wrap-item-timelist">
           评分：{{item.score}}
           医院：北京协和医院
+          排队时间： {{item.waitTime}}
+          路程时间: {{item.routeTime}}
         </text>
       </view>
     </view>
