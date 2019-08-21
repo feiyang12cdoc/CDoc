@@ -81,12 +81,13 @@ Page({
     })
   }, 
   btnSubmit: function(){
+    var that=this;
     // 跳转到诊断页--假数据
     wx.navigateTo({
       url: '/pages/aiResult/index',
       success: function (res) {
         // 通过eventChannel向被打开页面传送数据
-        res.eventChannel.emit('dataFromFastDiagnose', { data: this.data['output'] })
+        res.eventChannel.emit('dataFromFastDiagnose', { data: that.data['output'] })
       }
     })    
 
@@ -97,13 +98,15 @@ Page({
       success: function (res) {
         // 诊断中...
         // 跳转到诊断页
-        wx.navigateTo({
-          url: '/pages/aiResult/index',
-          success: function (res) {
-            // 通过eventChannel向被打开页面传送数据
-            res.eventChannel.emit('acceptDataFromOpenerPage', { data: res.data })
-          }
-        })        
+        if(res.statusCode==200){
+          wx.navigateTo({
+            url: '/pages/aiResult/index',
+            success: function (res) {
+              // 通过eventChannel向被打开页面传送数据
+              res.eventChannel.emit('acceptDataFromOpenerPage', { data: res.data })
+            }
+          })        
+        }
       },
       fail: function (res) {
         console.log('submit fail');
