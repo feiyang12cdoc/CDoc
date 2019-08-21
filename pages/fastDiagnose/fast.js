@@ -102,7 +102,7 @@ Page({
         // 跳转到诊断页
         if(res.statusCode==200){
           wx.navigateTo({
-            url: '/pages/aiResult/index',
+            url: '/pages/aiResult/index?query=' + that2.data,
             success: function (res) {
               // 通过eventChannel向被打开页面传送数据
               res.eventChannel.emit('acceptDataFromOpenerPage', { data: that2.data })
