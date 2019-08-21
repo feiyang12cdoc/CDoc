@@ -79,7 +79,6 @@ Page({
     var nextquestion = this.data.nextquestions[first_key_num];
     if (nextquestion !== '0'){
       //nextquestion 不为0，还有后续问题
-
       wx.request({
         url: 'https://wuwei.soft.360.cn/feiYang/intelligentQA',
         data: { question: nextquestion },
@@ -108,7 +107,7 @@ Page({
             totalanswers = that.data.checked_value.join(',');
           }
           that.setData({
-            questionPercent: 20,
+            questionPercent: 10 * total_questions.length,
             question: nextquestion,
             selectorNum: selector.length,
             selector: selector,
@@ -156,6 +155,7 @@ Page({
           }
 
           that.setData({ 
+            questionPercent: 100,
             display_card: "none" ,   //隐藏问答块
             display_result:"block",   //显示所有问题和答案块
             result_answers: result_answers,

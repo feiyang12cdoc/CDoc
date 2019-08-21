@@ -1,5 +1,4 @@
 <!--pages/entry/index.wxml-->
-<canvas canvas-id="cline" class="canvas">
   <view class="content">
     <view class="uploadPicbg">
       <navigator url="/pages/fastDiagnose/fast" class="uploadPicCircle">
@@ -14,4 +13,3 @@
     </view>
 
   </view>
-</canvas>

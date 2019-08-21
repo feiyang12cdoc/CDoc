@@ -10,6 +10,7 @@ page {
   margin: 20rpx auto 20rpx;
   height: 100%;
   border-radius: 20rpx;
+  padding-bottom: 20rpx;
 }
 
 .card_all {
@@ -17,7 +18,7 @@ page {
   background-color: #fff;
   margin: 20rpx auto 20rpx;
   border-radius: 20rpx;
-  padding-bottom: 20rpx;
+  padding-bottom: 48rpx;
   padding-top: 20rpx; 
 }
 
