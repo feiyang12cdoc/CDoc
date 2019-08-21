@@ -11,8 +11,8 @@
         <!-- 右边内容 上下结构 -->
         <view style='display:flex; flex-direction:column; margin:10rpx;'>
           <label class='item_title'>{{item.name}} 主治医生</label>
-          <label class='item_departments'>{{item.department}}  {{item.hospital}}</label>
-          <label class='item_features'>擅长{{item.skilled}}</label>
+          <label class='item_department'>{{item.department}}  {{item.hospital}}</label>
+          <label class='item_skilled'>擅长{{item.skilled}}</label>
           <label class='item_result'>评分{{item.score}} {{item.answer}}个回答</label>
           <!-- 右边底部内容 左右结构 -->
           <view style='display:flex; flex-direction:row; height：20rpx;'>

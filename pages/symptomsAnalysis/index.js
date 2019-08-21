@@ -65,10 +65,18 @@ Page({
     });
   },
 
+  checkboxChange: function (e) {
+    console.log('checkbox发生change事件，携带value值为,：', e.detail.value)
+    this.setData({ checked_value: e.detail.value});
+  },
+
   click: function(e){
     var that = this;
-    var questionID = e.currentTarget.dataset['index'];
-    var nextquestion = this.data.nextquestions[questionID];
+    var first_key = this.data.checked_value[0];
+    var first_key_num = this.data.selector.indexOf(first_key);
+    //var questionID = e.currentTarget.dataset['index'];
+    //console.log(questionID);
+    var nextquestion = this.data.nextquestions[first_key_num];
     if (nextquestion !== '0'){
       //nextquestion 不为0，还有后续问题
 
@@ -91,11 +99,14 @@ Page({
           totaldisplay[nextquestion] = selector; //所有已选的问题
 
           var totalanswers;
-          if(that.data.totalanswers.length > 0)
-            totalanswers = that.data.totalanswers + '|' + e.currentTarget.dataset['item'];
-          else
-            totalanswers = e.currentTarget.dataset['item'];
-
+          if(that.data.totalanswers.length > 0){
+            //totalanswers = that.data.totalanswers + '|' + e.currentTarget.dataset['item'];
+            totalanswers = that.data.totalanswers + '|' + that.data.checked_value.join(',');
+          }
+          else{
+            //totalanswers = e.currentTarget.dataset['item'];
+            totalanswers = that.data.checked_value.join(',');
+          }
           that.setData({
             questionPercent: 20,
             question: nextquestion,
