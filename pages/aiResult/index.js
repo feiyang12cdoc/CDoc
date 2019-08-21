@@ -20,11 +20,11 @@ Page({
         let result = data.data;
         that.setData({ aiResult: result.output.zz });
         // 自动跳转
-        setTimeout(() => {
-          wx.redirectTo({
-            url: '/pages/entry/index'
-          })
-        }, 1500)
+        // setTimeout(() => {
+        //   wx.redirectTo({
+        //     url: '/pages/entry/index'
+        //   })
+        // }, 1500)
       })
     }
     else {
