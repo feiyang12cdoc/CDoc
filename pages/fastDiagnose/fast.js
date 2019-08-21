@@ -57,34 +57,53 @@ Page({
       },
       success(res) {
         //do something
+        var data=JSON.parse(res.data).data
         that.setData({
           output:{
-            sex: res.data['sex'][0],
-            age: res.data['age'][0],
-            zz: res.data['zz'][0],
-            bing: res.data['bing'][0]
+            sex: data.sex[0],
+            age: data.age[0],
+            zz: data.zz[0],
+            bing: data.bing[0]
           }
         })
-
         wx.showToast({
           title: "上传成功",
           icon: 'success',
+          duration: 2000
+        })
+      },fail(res){
+        wx.showToast({
+          title: "上传失败",
+          icon: 'none',
           duration: 2000
         })
       }
     })
   }, 
   btnSubmit: function(){
-    wx.redirectTo({
-      url: '/pages/aiResult/index'
-    })
+    // 跳转到诊断页--假数据
+    wx.navigateTo({
+      url: '/pages/aiResult/index',
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('dataFromFastDiagnose', { data: this.data['output'] })
+      }
+    })    
+
     wx.request({
-      url: '', //和后台交互的地址，默认是json数据交互，由于我的就是json，这里就没有对header进行编写
+      url: 'https://wuwei.soft.360.cn/feiYang/aiDiagnose', 
       data: this.data['output'],
       method: 'POST',
       success: function (res) {
         // 诊断中...
         // 跳转到诊断页
+        wx.navigateTo({
+          url: '/pages/aiResult/index',
+          success: function (res) {
+            // 通过eventChannel向被打开页面传送数据
+            res.eventChannel.emit('acceptDataFromOpenerPage', { data: res.data })
+          }
+        })        
       },
       fail: function (res) {
         console.log('submit fail');
@@ -105,10 +124,10 @@ Page({
     })
     this.setData({
       output: {
-        sex: "女",
-        age: "75岁",
-        zz: "左眼视力下降3年,眼痛眼磨1个月",
-        bing: "左眼新生血管性青光眼"
+        sex: "",
+        age: "",
+        zz: "",
+        bing: ""
       }
     })
 
