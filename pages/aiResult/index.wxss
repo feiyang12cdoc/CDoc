@@ -30,6 +30,9 @@ page {
   flex-direction: column;
 }
 
+.result {
+  
+}
 .imageDocker {
   display: flex;
   justify-content: center;

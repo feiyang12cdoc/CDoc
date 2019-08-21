@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    aiResult:{}
+    aiResult:'',
+    suggestion: ''
   },
 
   /**
@@ -28,8 +29,13 @@ Page({
       })
     }
     else {
-      console.log(options)
-      that.setData({ aiResult: options.query });
+      console.log(options);
+      let str = options.query;
+      if(str){
+        let arr = str.split('#');
+        that.setData({ aiResult: arr[0], suggestion: arr[1] });
+      }
+      
     }
   },
 
