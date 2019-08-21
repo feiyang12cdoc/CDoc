@@ -8,7 +8,7 @@ page {
   width: 95%;
   background-color: #fff;
   margin: 20rpx auto 20rpx;
-  height: 518px;
+  height: 100%;
   border-radius: 20rpx;
 }
 
@@ -18,6 +18,7 @@ page {
   margin: 20rpx auto 20rpx;
   border-radius: 20rpx;
   padding-bottom: 20rpx;
+  padding-top: 20rpx; 
 }
 
 .title {
@@ -26,14 +27,23 @@ page {
   margin-top: 20rpx;
   color: rgb(0, 0, 0);
   z-index: 1;
-  font-size: 23px;
-  padding-top: 60rpx;
-  padding-left: 70rpx;
+  font-size: 50rpx;
+  padding-left: 40rpx;
+  padding-top: 20rpx;
+}
+
+.title_all {
+  text-align: left;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-size: 40rpx;
+  padding-left: 40rpx;
+  margin: 10rpx auto;
+  font-family: Roboto;
 }
 
 .card_yellow {
   width: 322px;
-  /* height: 50px; */
   border-radius: 7px;
   background-color: rgba(253, 235, 23);
   color: rgba(16, 16, 16, 1);
@@ -45,17 +55,29 @@ page {
   margin: 20rpx auto;
 }
 
+.card_yellow_all {
+  width: 650rpx;
+  border-radius: 7px;
+  background-color: rgba(253, 235, 23);
+  color: rgba(16, 16, 16, 1);
+  font-size: 40rpx;
+  line-height: 35px;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
 .card_button {
   width: 322px;
-  /* height: 50px; */
   border-radius: 7px;
   border: 2px solid rgba(255,255,255);
   color: rgba(16, 16, 16, 1);
   background-color: rgba(253, 235, 23);
-  font-size: 20px;
-  line-height: 50px;
+  font-size: 45rpx;
+  line-height: 80rpx;
   text-align: center;
   font-family: Roboto;
   font-weight: bold;
-  margin: 15rpx auto;
+  margin: 60rpx auto;
 }
