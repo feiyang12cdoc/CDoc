@@ -1,13 +1,17 @@
-<!--入口 pages/entry/index.wxml-->
-<view class="whitebg">
-  <navigator url="/pages/fastDiagnose/fast" class="yellowCircle">
-    <view class="title">快速确诊</view>
-  </navigator>
-</view>
+<!--pages/entry/index.wxml-->
+<canvas canvas-id="cline" class="canvas">
+  <view class="content">
+    <view class="uploadPicbg">
+      <navigator url="/pages/fastDiagnose/fast" class="uploadPicCircle">
+        <view class="title">快速确诊</view>
+      </navigator>
+    </view>
 
-<view class="yellowbg">
-  <navigator url="/pages/symptomsAnalysis/index" class="whiteCircle">
-  <view class="title">AI确诊</view>
-  </navigator>
-</view>
+    <view class="aiQuestbg">
+      <navigator url="/pages/symptomsAnalysis/index" class="aiQuestCircle">
+      <view class="title">AI问诊</view>
+      </navigator>
+    </view>
 
+  </view>
+</canvas>
