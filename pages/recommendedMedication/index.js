@@ -8,21 +8,19 @@ Page({
     loading:false,
     list:[
       {
-        "id":1,        "photo":"https://img.alicdn.com/imgextra/i2/2928278102/TB2BgbFXcoa61BjSspdXXajFVXa_!!2928278102.jpg_430x430q90.jpg",
+        "id":1,        "img":"https://img.alicdn.com/imgextra/i2/2928278102/TB2BgbFXcoa61BjSspdXXajFVXa_!!2928278102.jpg_430x430q90.jpg",
         "name":"气管炎丸",
-        "description":"散寒镇咳，祛痰定喘。用于外感风寒引起的咳嗽，气促哮喘，喉中发痒，痰涎壅盛，胸膈满闷，老年痰喘。",
+        "main_diseases":"散寒镇咳，祛痰定喘。用于外感风寒引起的咳嗽，气促哮喘，喉中发痒，痰涎壅盛，胸膈满闷，老年痰喘。",
         "usage":"口服，一次30粒，一日2次。",      
         "consumption_date":"consumption_date"
-
       },
       {
         "id":2,
-        "photo": "https://img.alicdn.com/imgextra/i1/858915326/TB2QUCSbrAlyKJjSZFBXXbtiFXa_!!858915326.jpg_430x430q90.jpg",
+        "img": "https://img.alicdn.com/imgextra/i1/858915326/TB2QUCSbrAlyKJjSZFBXXbtiFXa_!!858915326.jpg_430x430q90.jpg",
         "name": "阿莫西林",
-        "description": "上呼吸道感染 溃疡 咳痰 扁桃体发炎 疼痛 皮肤软组织感染",
+        "main_diseases": "上呼吸道感染 溃疡 咳痰 扁桃体发炎 疼痛 皮肤软组织感染",
         "usage": "成人1次2粒，每6-8小时一次。",
         "consumption_date": ""
-
       },
     ]
 

@@ -1,7 +1,7 @@
 /* pages/medicalConsultation/index.wxss */
 
 page {
-  background: #f8e71c;
+  /* background: #f8e71c; */
 }
 
 .index-logo {
@@ -15,10 +15,12 @@ page {
   text-align: center;
   text-shadow: 1px 1px 1px #888;
 }
-
+.item_from {
+  /* width: 50%; */
+}
 .item {
   display: flex;
-  height: 200rpx;
+  height: 270rpx;
   width: 700rpx;
   background: #fff;
   margin-top: 20rpx;
@@ -73,8 +75,7 @@ page {
 }
 
 .item_tag {
-  display: flex;
-  flex-direction: row;
+  
   height: 20rpx;
   margin-bottom: 10rpx;
 }

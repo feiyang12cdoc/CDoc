@@ -8,6 +8,7 @@ Page({
     loading: false,
     question: "请选择就诊人的性别", 
     display_result:"none", 
+    color: "",
   },
 
   /**
@@ -66,8 +67,9 @@ Page({
   },
 
   checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为,：', e.detail.value)
-    this.setData({ checked_value: e.detail.value});
+    console.log('checkbox发生change事件，携带value值为,：', e.detail.value);
+    
+    this.setData({ checked_value: e.detail.value, color:"checked"});
   },
 
   click: function(e){

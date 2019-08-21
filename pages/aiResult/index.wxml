@@ -1,6 +1,5 @@
 <!--pages/aiResult/index.wxml-->
 <view class="page-body">
-  <progress percent="{{questionPercent}}" color="black" backgroundColor="#FDEB17" active />
 
   <view class='card_bg'>
     <view class="title">检测结果：</view>

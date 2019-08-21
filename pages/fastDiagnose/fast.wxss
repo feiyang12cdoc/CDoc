@@ -1,6 +1,6 @@
 /* pages/fastDiagnose/fast.wxss */
 page{
-  background: #F8E71C;
+  /* background: #F8E71C; */
 }
 .pannel{
   width:90%;
@@ -87,7 +87,7 @@ page{
   height:80rpx;
   margin-top: 80rpx; 
   color:#000000;
-  background-color: rgba(253, 235, 23);
+  background-color: #ecebeb;
   font-family: Roboto;
   font-weight: bold;
   border: 6rpx solid #ffffff;

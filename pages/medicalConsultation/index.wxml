@@ -16,7 +16,8 @@
           <label class='item_result'>评分{{item.score}} {{item.answer}}个回答</label>
           <!-- 右边底部内容 左右结构 -->
           <view class="item_tag">
-            <label class='item_from'>{{item.tag}}</label>
+            <view class='item_from'>等待时间：{{item.waitTime}}</view> 
+            <view class='item_from'>路程时间：{{item.routeTime}}</view>
             <!-- <label class='item_time'>{{item.consumption_date}}</label> -->
           </view>
         </view>

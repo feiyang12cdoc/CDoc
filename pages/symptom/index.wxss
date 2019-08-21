@@ -4,7 +4,6 @@
   float: left;
   margin: 30rpx 10rpx; 
   font-size: 40rpx;
-  background-color: rgba(253, 235, 23);
   color: rgba(16, 16, 16, 1);
   text-align: center;
   font-weight: bold;
@@ -12,11 +11,11 @@
   display: block;
 }
 .more {
-   width: 40%;
+  width: 45%;
   float: left;
   margin: 30rpx 10rpx; 
   font-size: 40rpx;
-  text-align: center;
+  text-align: right;
   font-weight: bold;
   box-shadow: 0 0 0 0;
 }
@@ -25,7 +24,7 @@
   overflow: hidden;
 }
 .AI {
-  background-color: rgba(253, 235, 23);
+  background-color: #eee;
   width: 200rpx;
   height: 200rpx;
   vertical-align: center;
@@ -34,4 +33,5 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    margin-left: 80rpx;
 }

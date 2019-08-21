@@ -97,7 +97,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -159,6 +159,13 @@
 					"id": -1,
 					"name": "pages/mapAuery/index",
 					"pathName": "pages/mapAuery/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/symptom/index",
+					"pathName": "pages/symptom/index",
 					"query": "",
 					"scene": null
 				},

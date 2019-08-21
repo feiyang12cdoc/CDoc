@@ -1,7 +1,7 @@
 /* pages/aiResult/index.wxss */
 
 page {
-  background: #fdeb17;
+  /* background: #fdeb17; */
 }
 
 .card_bg {
@@ -10,6 +10,7 @@ page {
   margin: 20rpx auto 0;
   height: 400px;
   border-radius: 20rpx;
+  border: 2rpx solid rgb(82, 81, 81);
 }
 
 .card_fun_bg {

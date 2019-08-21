@@ -1,6 +1,6 @@
 <!--pages/symptomsAnalysis/index.wxml-->
 <view class="page-body">
-  <progress percent="{{questionPercent}}" color="black" backgroundColor="#FDEB17" active-mode />
+  <progress percent="{{questionPercent}}" color="black" backgroundColor="#eee" active-mode />
 
   <view class='card_all' style="display:{{display_result}}">
     <view wx:for="{{result_display}}" wx:for-index="index" wx:for-item="itemName">
@@ -19,7 +19,10 @@
   
     <checkbox-group bindchange="checkboxChange">
       <label class="checkbox" wx:for="{{selector}}" wx:for-item="itemName">
-          <checkbox value="{{itemName}}"  checked="{{itemName.checked}}" />{{itemName}}
+      <view class="card_yellow" >
+          <checkbox value="{{itemName}}"  checked="{{itemName.checked}}" />
+          {{itemName}}
+          </view>
       </label>
     </checkbox-group>
   </view>
@@ -27,3 +30,7 @@
 
   <!-- <navigator url="/pages/recommendedMedication/index" hover-class="navigator-hover">跳转到下一页 >> </navigator> -->
 </view>
+
+
+
+    
