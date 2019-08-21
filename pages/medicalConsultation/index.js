@@ -9,6 +9,7 @@ Page({
   data: {
     loading: false,
     list: [
+      //数据格式说明
       {
         "id": 1, 
         "image": "./img/e32a706f6f6c6f6f6c6f6fdc01.jpg",
@@ -46,7 +47,7 @@ Page({
       wx.request({
         url: 'https://wuwei.soft.360.cn/feiYang/getDoctors',
         //data: { symptom: that.data.symptom },
-        data: { hospitalNameList: "北京协和医院" },
+        data: { symptom: "轻微发烧" },
         header: {
           'content-type': 'application/json' // 默认值
         },
