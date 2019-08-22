@@ -20,7 +20,8 @@
         <view class="wrap-item-name">{{item.name}}</view>
         <text class="wrap-item-timelist">
           地址：{{item.address}}
-          <!-- 科室等待时间： {{item.departmentalWaitingTime}} -->
+          路程时间：{{item.routeWaitingTime}}
+          挂号排队时间： {{item.departmentalWaitingTime}}
         </text>
       </view>
     </view>
