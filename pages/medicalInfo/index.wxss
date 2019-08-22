@@ -1,0 +1,14 @@
+/* pages/medicalInfo/index.wxss */
+.wrap {
+  padding: 40rpx;
+}
+image {
+  /* height: 600rpx;
+  width: 400rpx; */
+}
+view {
+  margin-bottom: 120rpx;
+}
+button {
+  margin-top: 120rpx;
+}

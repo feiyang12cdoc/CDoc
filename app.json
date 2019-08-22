@@ -9,7 +9,8 @@
     "pages/aiResult/index",
     "pages/fastDiagnose/fast",
     "pages/entry/index",
-    "pages/symptom/index"
+    "pages/symptom/index",
+    "pages/medicalInfo/index"
   ],
   "permission": {
     "scope.userLocation": {

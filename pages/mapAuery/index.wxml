@@ -22,7 +22,6 @@
           地址：{{item.address}}
           路程时间： {{item.routeTime}}
           等待时间： {{item.departmentalWaitingTime}}
-          
         </text>
       </view>
     </view>

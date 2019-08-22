@@ -4,7 +4,7 @@
   <loading hidden="{{!loading}}">加载中</loading>
 
   <block class="" wx:for="{{list}}" wx:key="id">
-    <navigator url='./list/item?id={{item.id}}'>
+    <navigator url='/pages/medicalInfo/index?id={{item.id}}'>
       <view class="item" hover-class='hover-class' id="{{item.id}}" style=''>
         <!--左边图片-->
         <view style='width:128rpx; height:128rpx; margin:20rpx;'>
