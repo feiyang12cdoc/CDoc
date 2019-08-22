@@ -10,3 +10,6 @@ page {
   /* margin-bottom: 30rpx; */
 }
 
+.wrap-item{
+  background-color: #ffffff
+}

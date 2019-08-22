@@ -6,7 +6,9 @@
 
 **小病AI看，大病不用等**
 
-
+<video id="video" controls="" preload="none" >
+      <source id="mp4" src="image/CDOC.mp4" type="video/mp4">
+      </video>
 
 ## 业务流程
 
