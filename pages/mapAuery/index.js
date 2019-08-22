@@ -191,10 +191,14 @@ Page({
       keyword: '医院',
       success:  (res) => {
         let hospitalInfo = res.data;
-        // that.goDestination({
-        //   latitude: hospitalInfo[0].location.lat,
-        //   longitude: hospitalInfo[0].location.lng
-        // });
+        hospitalInfo.splice(0, 1);
+        hospitalInfo.filter((currentValue, index, arr) => {
+          hospitalInfo.splice(0, 1);
+          
+        });
+        that.setData({
+          hospitalList: hospitalInfo
+        });
         that.calculateDistance(res.data);
       },
       fail: function (res) {

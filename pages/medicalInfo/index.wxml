@@ -1,0 +1,12 @@
+<!--pages/medicalInfo/index.wxml-->
+<!--pages/recommendedMedication/index.wxml-->
+
+<view class="wrap">
+药名：{{list.name}}
+<image src="{{list.img}}"></image>
+ <view>反应：{{list.adverse_reactions}}</view>
+ 剂量：{{list.usage}}
+ <button bindtap="send">配送</button>
+ <loading hidden="{{loading}}">正在安排配送...</loading>
+</view>
+

@@ -88,8 +88,8 @@ Page({
       //https://wuwei.soft.360.cn/feiYang/getDoctors?symptom=轻微发烧
       wx.request({
         url: 'https://wuwei.soft.360.cn/feiYang/getDoctors',
-        data: { symptom: that.data.symptom },
-        // data: { symptom: "轻微发烧" },
+        // data: { symptom: that.data.symptom },
+        data: { symptom: "轻微发烧" },
         header: {
           'content-type': 'application/json' // 默认值
         },
