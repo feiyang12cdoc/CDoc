@@ -1,20 +1,20 @@
 <!--pages/fastDiagnose/fast.wxml-->
 <view class="pannel">
-  <view class="input">
+  <view class="input">          
     <view class="select-image" style="background-image: {{backgroudImage}}">
       <image hidden="{{showUploadBtn}}" src="./add.svg" bindtap="selectImage" style="height:60rpx;width:60rpx;">
       </image>
       <text hidden="{{showUploadBtn}}" style="margin-top: 34rpx;">添加病例照片</text>
-      <text class="tip">上传附件不对外公开，保证隐私</text>
+      <text class="tip" hidden="{{showUploadBtn}}" >上传附件不对外公开，保证隐私</text>
       <button hidden="{{!showUploadBtn}}" style="width:200rpx;" size="mini" type="primary" bindtap="uploadImage">
-        上传
+          上传
       </button>
       <button hidden="{{!showUploadBtn}}" style="width:200rpx;margin-top:20rpx;" size="mini" bindtap="selectImage">
-        重新选择
+          重新选择
       </button>
     </view>
   </view>
-  <view class="output"  >
+  <view class="output"  hidden="{{tt}}">
     <view  hidden="{{!hideOutput}}" >
       <image src="./loading.gif"  class="loading" ></image>
     </view>

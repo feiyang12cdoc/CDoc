@@ -4,15 +4,17 @@
   <view class='card_bg'>
     <view class="title">检测结果：</view>
     <view decode="{{true}}" class="result">{{aiResult}}</view>
+    <view decode="{{true}}" class="title">{{suggestion}}</view>
+    
   </view>
   <view class='card_fun_bg'>
-    <navigator class="col" url="/pages/recommendedMedication/index" class="recommendedMedication">
+    <navigator class="col" url="/pages/recommendedMedication/index?query={{aiResult}}" class="recommendedMedication">
       <view class="imageDocker">
         <image src="./image/pills.png" class="image"></image>
       </view>
       <text>药品推荐</text>
     </navigator>
-    <navigator class="col" url="/pages/medicalConsultation/index" class="medicalConsultation">
+    <navigator class="col" url="/pages/medicalConsultation/index?query={{aiResult}}" class="medicalConsultation">
       <view class="imageDocker">
         <image src="./image/doctor.png" class="image"></image>
       </view>      

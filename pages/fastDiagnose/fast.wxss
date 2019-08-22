@@ -34,6 +34,7 @@ page{
   border-radius: 7px;
 }
 
+
 .tip{
   margin-top:10rpx; 
   color: #8c8c8c;

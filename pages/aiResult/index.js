@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    aiResult:{}
+    aiResult:'',
+    suggestion: ''
   },
 
   /**
@@ -13,6 +14,8 @@ Page({
   onLoad: function (options) {
     
     let that = this;
+    console.log(options);
+
     if (options.query == "[object Object]"){
       const eventChannel = this.getOpenerEventChannel();
       // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
@@ -28,9 +31,14 @@ Page({
       })
     }
     else {
-      console.log(options)
-      that.setData({ aiResult: options.query });
+      let str = options.query;
+      if(str){
+        let arr = str.split('#');
+        that.setData({ aiResult: arr[0], suggestion: arr[1] });
+      }
+      
     }
+    console.log('aiResult', that.data.aiResult);
   },
 
   /**

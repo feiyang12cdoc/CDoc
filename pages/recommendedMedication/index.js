@@ -41,7 +41,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this       //很重要，一定要写
+    var that = this;       //很重要，一定要写
+    console.log('参数',options.query);
+    wx.request({
+      url: 'https://wuwei.soft.360.cn/feiYang/getDrugs',
+      data: {
+        symptom: options.query
+      },
+      method: 'GET',
+      success: function (res) {
+        var datas = res.data.data;//res.data就是从后台接收到的值
+        console.log(datas);
+        that.setData({//循环完后，再对list进行赋值
+          list: datas,
+          loading: false
+        })
+      },
+      fail: function (res) {
+        console.log('submit fail');
+      },
+      complete: function (res) {
+        console.log('submit complete');
+      }
+    })
     const eventChannel = that.getOpenerEventChannel();
 
     eventChannel.on('acceptDataFromOpenerPage', function (data) {
@@ -51,27 +73,6 @@ Page({
       });
       console.log(that.data.list)
     })
-    // wx.request({
-    //   url: '',//和后台交互的地址，默认是json数据交互，由于我的就是json，这里就没有对header进行编写
-    //   data: {},
-    //   method: 'POST',
-    //   success: function (res) {
-    //     var datas = res.data;//res.data就是从后台接收到的值
-    //     for (var i = 0; i < datas.length; i++) {
-    //       datas[i]["consumption_date"] = time.formatTime(new Date(datas[i]["consumption_date"]))
-    //     }
-    //     that.setData({//循环完后，再对list进行赋值
-    //       list: datas,
-    //       loading: false
-    //     })
-    //   },
-    //   fail: function (res) {
-    //     console.log('submit fail');
-    //   },
-    //   complete: function (res) {
-    //     console.log('submit complete');
-    //   }
-    // })
     // 本地数据测试
     this.validate(this.data["list"]);
     wx.setNavigationBarTitle({

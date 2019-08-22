@@ -6,7 +6,7 @@ Page({
    */
   data: {
     loading: false,
-    question: "请选择就诊人的性别", 
+    question: "请选择您身体哪里不舒服", 
     display_result:"none", 
     color: "",
   },
@@ -16,11 +16,11 @@ Page({
    */
   onLoad: function(options) {
     wx.clearStorage() ;
-    var totaldisplay = {"请选择就诊人的性别":""}
+    var totaldisplay = {"请选择您身体哪里不舒服":""}
     var that = this;
     wx.request({
       url: 'https://wuwei.soft.360.cn/feiYang/intelligentQA',//和后台交互的地址
-      data: { question: "请选择就诊人的性别"},
+      data: { question: "请选择您身体哪里不舒服"},
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -30,12 +30,12 @@ Page({
         console.log(res);
         var nextquestions = datas.data.question.split("#");
         var selector = datas.data.answer.split(",");
-        totaldisplay["请选择就诊人的性别"] = selector;
+        totaldisplay["请选择您身体哪里不舒服"] = selector;
         var total_questions = [];
-        total_questions.push("请选择就诊人的性别");
+        total_questions.push("请选择您身体哪里不舒服");
         that.setData({
           questionPercent: 20,
-          question: "请选择就诊人的性别",
+          question: "请选择您身体哪里不舒服",
           selectorNum: selector.length,     //字符串答案个数
           selector: selector,             //字符串答案
           nextquestions: nextquestions,     //下一个请求回复的问题

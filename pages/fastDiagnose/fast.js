@@ -10,6 +10,7 @@ Page({
     backgroudImage:"",
     showUploadBtn: false,
     hideOutput:false,
+    tt:false,
     output:{
       sex:"",
       age:"",
@@ -34,13 +35,23 @@ Page({
         console.log("choose success");
         // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths;
+        // 图片转base64 作为背景
+        wx.getFileSystemManager().readFile({
+          filePath: res.tempFilePaths[0], //选择图片返回的相对路径
+          encoding: 'base64', //编码格式
+          success: res => { //成功的回调
+            // 更新view
+            that.setData({
+              filepaths: tempFilePaths[0],
+              backgroudImage: "url('data:image/png;base64," + res.data + "');",
+              showUploadBtn: true,
+            });
+            // console.log('data:image/png;base64,' + res.data)
+          }
+        })
 
-        // 更新view
-        that.setData({
-          filepaths: tempFilePaths[0],
-          backgroudImage: "url('" + tempFilePaths[0] +"');",
-          showUploadBtn:true,
-        });
+
+        console.log(that.data.backgroudImage)
       },
       fail(res){
         console.log("choose failed")
@@ -49,25 +60,40 @@ Page({
   },
   uploadImage: function(){
     var that = this; 
+    // 启用动画
+    that.setData({
+      hideOutput: true,
+    })
     wx.uploadFile({
       url: 'https://wuwei.soft.360.cn/feiYang/updateCase',
+      header:{
+        'content-type': 'multipart/form-data'
+      },
       filePath: this.data['filepaths'],
       name: 'file',
       formData: {
         'user': 'test'
       },
       success(res) {
+        var data = JSON.parse(res.data).data
         //do something
-        var data=JSON.parse(res.data).data
-        that.setData({
-          output:{
-            sex: data.sex[0],
-            age: data.age[0],
-            zz: data.zz[0],
-            bing: data.bing[0]
-          },
-          disableSubmitBtn: false
-        })
+        setTimeout(() => {
+          that.setData({
+            hideOutput: false,
+          })
+          that.setData({
+            output: {
+              sex: data.sex[0],
+              age: data.age[0],
+              zz: data.zz[0],
+              bing: data.bing[0]
+            },
+            disableSubmitBtn: false
+          })
+        }, 2500)
+        // 
+        
+        
         // wx.showToast({
         //   title: "上传成功",
         //   icon: 'success',
@@ -81,14 +107,7 @@ Page({
         })
       }
     })
-    this.setData({
-      hideOutput: true,
-    })
-    setTimeout(() => {
-      this.setData({
-        hideOutput: false,
-      })
-    }, 2500)
+
   }, 
   btnSubmit: function(e){
     var that2 = this 

@@ -30,6 +30,9 @@ page {
   flex-direction: column;
 }
 
+.result {
+
+}
 .imageDocker {
   display: flex;
   justify-content: center;
@@ -48,9 +51,8 @@ page {
   color: rgb(0, 0, 0);
   z-index: 1;
   font-size: 20px;
-  padding-top: 60rpx;
-  padding-left: 70rpx;
   font-weight: bold;
+  padding: 70rpx;
 }
 
 .result {
@@ -62,7 +64,7 @@ page {
   font-size: 36px;
   padding-top: 30rpx;
   padding-left: 70rpx;
-  padding-right: 70rpx;
+  /* padding-right: 70rpx; */
   font-weight: bold;
 }
 

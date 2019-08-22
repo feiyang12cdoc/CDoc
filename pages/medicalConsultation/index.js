@@ -42,14 +42,14 @@ Page({
   onLoad: function (options) {
     //页面加载，获取参数：诊断结果 ?symptom=xxx
       var that = this;
-      that.setData({ symptom:"xxx"});
-
+    if (options.query == '公安部机关门诊部'){
+      that.setData({ symptom: options.query });
       //发起请求，查询获得医生信息
       //https://wuwei.soft.360.cn/feiYang/getDoctors?symptom=轻微发烧
       wx.request({
         url: 'https://wuwei.soft.360.cn/feiYang/getDoctors',
-        //data: { symptom: that.data.symptom },
-        data: { symptom: "轻微发烧" },
+        // data: { symptom: that.data.symptom },
+        data: { hospitalNameList: "北京协和医院" },
         header: {
           'content-type': 'application/json' // 默认值
         },
@@ -58,9 +58,50 @@ Page({
           //需要把返回res 医生信息
           console.log(res);
           var doctors = res.data.data;
-          that.setData({ list: doctors});
+          that.setData({ list: doctors });
         }
-    })
+      })
+    }
+    else if (options.query == "潍城豪德医院"){
+      that.setData({ symptom: options.query });
+      //发起请求，查询获得医生信息
+      //https://wuwei.soft.360.cn/feiYang/getDoctors?symptom=轻微发烧
+      wx.request({
+        url: 'https://wuwei.soft.360.cn/feiYang/getDoctors',
+        // data: { symptom: that.data.symptom },
+        data: { hospitalNameList: "中国中医科学院眼科医院" },
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        method: 'GET',
+        success: function (res) {
+          //需要把返回res 医生信息
+          console.log(res);
+          var doctors = res.data.data;
+          that.setData({ list: doctors });
+        }
+      })
+    }
+    else {
+      that.setData({ symptom: options.query });
+      //发起请求，查询获得医生信息
+      //https://wuwei.soft.360.cn/feiYang/getDoctors?symptom=轻微发烧
+      wx.request({
+        url: 'https://wuwei.soft.360.cn/feiYang/getDoctors',
+        data: { symptom: that.data.symptom },
+        // data: { symptom: "轻微发烧" },
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        method: 'GET',
+        success: function (res) {
+          //需要把返回res 医生信息
+          console.log(res);
+          var doctors = res.data.data;
+          that.setData({ list: doctors });
+        }
+      })
+    }
   }
 
  

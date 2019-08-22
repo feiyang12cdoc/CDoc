@@ -16,12 +16,12 @@
   <view class = "wrap-list" >
     <view class = "wrap-item" wx:for = "{{hospitalList}}" wx:key = "{{index}}"> 
       <!-- <image class="wrap-item-image" src="{{item.doctorImg}}"></image> -->
-      <view class="wrap-item-desc" bindtap="getDoctor11">
+      <view class="wrap-item-desc" bindtap="getDoctor11" data-hospital="{{item.name}}">
         <view class="wrap-item-name">{{item.name}}</view>
         <text class="wrap-item-timelist">
           地址：{{item.address}}
-          路程时间：{{item.routeWaitingTime}}
-          挂号排队时间： {{item.departmentalWaitingTime}}
+          路程时间： {{item.routeTime}}
+          等待时间： {{item.departmentalWaitingTime}}
         </text>
       </view>
     </view>
