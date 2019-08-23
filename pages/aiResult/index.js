@@ -21,7 +21,7 @@ Page({
       // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
       eventChannel.on('acceptDataFromOpenerPage', function (data) {
         let result = data.data;
-        that.setData({ aiResult: result.output.zz });
+        that.setData({ aiResult: result.output.bing });
         // 自动跳转
         // setTimeout(() => {
         //   wx.redirectTo({
